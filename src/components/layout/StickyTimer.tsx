@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 
 // â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD  = "#C9A84C";
 const NAVY  = "#000025";
-const TOTAL = 30 * 24 * 60 * 60; // 30 days in seconds â€” resets on zero
+const TOTAL = 30 * 24 * 60 * 60; // 30 days in seconds — resets on zero
 
 function pad(n: number) {
   return String(n).padStart(2, "0");
@@ -41,7 +41,7 @@ export function StickyTimer() {
   const mins  = Math.floor((secs % 3600) / 60);
   const sec   = secs % 60;
 
-  // Last 24 hrs â€” digits shift to red
+  // Last 24 hrs — digits shift to red
   const isUrgent = days === 0;
 
   return (
@@ -143,12 +143,12 @@ export function StickyTimer() {
         role="banner"
         aria-label="Limited time offer"
       >
-        {/* No max-width â€” content fills full strip with only side padding */}
+        {/* No max-width — content fills full strip with only side padding */}
         <div className="flex h-[64px] w-full items-center justify-between gap-4 px-4 sm:px-8">
 
-          {/* Left â€” blinking label */}
+          {/* Left — blinking label */}
           <div className="st-hurry hidden shrink-0 items-center gap-2 sm:flex">
-            <span style={{ fontSize: "16px" }} aria-hidden="true">âš¡</span>
+            <span style={{ fontSize: "16px" }} aria-hidden="true">⚡</span>
             <span
               className="text-[12px] font-black tracking-[0.14em] uppercase"
               style={{ color: GOLD }}
@@ -157,16 +157,16 @@ export function StickyTimer() {
             </span>
           </div>
 
-          {/* Centre â€” message */}
+          {/* Centre — message */}
           <p className="flex-1 text-center text-[13px] font-bold leading-tight text-white sm:text-[14px]">
-            <span className="sm:hidden">âš¡ </span>
-            Grab your copy â€” price resets when the timer hits zero
+            <span className="sm:hidden">⚡ </span>
+            Grab your copy — price resets when the timer hits zero
           </p>
 
-          {/* Right â€” 4-unit timer + CTA */}
+          {/* Right — 4-unit timer + CTA */}
           <div className="flex shrink-0 items-center gap-3">
 
-            {/* Timer: DAYS Â· HOURS Â· MINS Â· SECS */}
+            {/* Timer: DAYS · HOURS · MINS · SECS */}
             <div
               className="flex items-center gap-1"
               aria-live="polite"
@@ -210,14 +210,14 @@ export function StickyTimer() {
               rel="noopener noreferrer"
               className="st-cta hidden sm:inline-block"
             >
-              Get the Book â€” $9.99&nbsp;â†’
+              Get the Book — $9.99&nbsp;→
             </a>
           </div>
 
         </div>
       </div>
 
-      {/* Spacer â€” same height as bar */}
+      {/* Spacer — same height as bar */}
       <div className="h-[64px]" aria-hidden="true" />
     </>
   );

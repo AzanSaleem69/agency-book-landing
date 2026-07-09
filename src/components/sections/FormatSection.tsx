@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useInView } from "react-intersection-observer";
 import { CheckCircle2 } from "lucide-react";
@@ -13,10 +13,10 @@ const formats = [
     id:       "hardcopy",
     label:    "Hardcopy",
     image:    "/book.png",
-    imageAlt: "7-Figure Agency Mindset A-Z â€” Hardcopy edition",
+    imageAlt: "7-Figure Agency Mindset A-Z — Hardcopy edition",
     price:    "$9.99",
     benefits: [
-      "Physical copy â€” read anywhere, no screen required",
+      "Physical copy — read anywhere, no screen required",
       "Annotate, highlight, and revisit chapters easily",
       "Ships worldwide",
       "Ideal for deep reference reading",
@@ -29,10 +29,10 @@ const formats = [
     id:       "ebook",
     label:    "E-book",
     image:    "/book.png",
-    imageAlt: "7-Figure Agency Mindset A-Z â€” E-book edition",
+    imageAlt: "7-Figure Agency Mindset A-Z — E-book edition",
     price:    "$9.99",
     benefits: [
-      "Instant access â€” start reading in under 60 seconds",
+      "Instant access — start reading in under 60 seconds",
       "Read on any device: phone, tablet, laptop",
       "Available on Amazon Kindle",
       "Searchable and portable",
@@ -164,7 +164,7 @@ export function FormatSection() {
               className={`fs-head-item fs-hd3 ${headIn ? "fs-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "#6B6B80" }}
             >
-              Same 30 chapters. Full content in both. Whether you read at your desk or on the go â€” the only decision left is which format you prefer.
+              Same 30 chapters. Full content in both. Whether you read at your desk or on the go — the only decision left is which format you prefer.
             </p>
           </div>
 
@@ -180,7 +180,7 @@ export function FormatSection() {
                   key={id}
                   className={`${col} ${cardsIn ? "fs-in" : ""} relative`}
                 >
-                  {/* "Most Popular" badge â€” e-book only */}
+                  {/* "Most Popular" badge — e-book only */}
                   {featured && (
                     <div
                       className="absolute -top-8 left-0 right-0 flex justify-center"
@@ -256,7 +256,7 @@ function CardInner({
 
   return (
     <div className={cardClass}>
-      {/* Book image â€” hardcopy gets a warm shadow + slight tilt, ebook gets a gold glow */}
+      {/* Book image — hardcopy gets a warm shadow + slight tilt, ebook gets a gold glow */}
       <div className="mb-6 flex justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useInView } from "react-intersection-observer";
 import {
@@ -16,12 +16,12 @@ const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  Users2,
     title: "Hiring People Who Actually Deliver",
-    body:  "The recruitment, vetting, and onboarding process for building a team that extends your output â€” not one that creates another management job you didn't sign up for.",
+    body:  "The recruitment, vetting, and onboarding process for building a team that extends your output — not one that creates another management job you didn't sign up for.",
   },
   {
     icon:  Zap,
     title: "Automating the Work That Drains You",
-    body:  "Identify the repetitive, low-leverage tasks eating your team's hours and replace them with documented systems and smart automation â€” so your people focus on client results.",
+    body:  "Identify the repetitive, low-leverage tasks eating your team's hours and replace them with documented systems and smart automation — so your people focus on client results.",
   },
   {
     icon:  Coins,
@@ -36,12 +36,12 @@ const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  ListChecks,
     title: "Building SOPs That Don't Live in Your Head",
-    body:  "If it only works when you're watching â€” it's not a system. Learn how to document, delegate, and quality-control your delivery so output stays consistent as the team grows.",
+    body:  "If it only works when you're watching — it's not a system. Learn how to document, delegate, and quality-control your delivery so output stays consistent as the team grows.",
   },
   {
     icon:  Target,
     title: "Growing Past Seven Figures Without Breaking",
-    body:  "The leadership mindset shifts, OKR frameworks, and decision-making structures that let you operate as a CEO â€” not the person who has to fix everything that goes wrong.",
+    body:  "The leadership mindset shifts, OKR frameworks, and decision-making structures that let you operate as a CEO — not the person who has to fix everything that goes wrong.",
   },
 ];
 
@@ -87,8 +87,8 @@ export function ScaleSection() {
 
         /*
          * Two-layer card approach:
-         *   .sc-wrap  â†’ entrance (opacity + translateY with stagger delay)
-         *   .sc-card  â†’ hover (no delay, instant response)
+         *   .sc-wrap  → entrance (opacity + translateY with stagger delay)
+         *   .sc-card  → hover (no delay, instant response)
          */
         .sc-wrap {
           opacity: 0;
@@ -139,7 +139,7 @@ export function ScaleSection() {
       <section
         style={{ backgroundColor: NAVY }}
         className="relative overflow-hidden py-24 sm:py-28"
-        aria-label="Phase Three â€” Scale"
+        aria-label="Phase Three — Scale"
       >
         {/* Animated dot particle background */}
         <div className="sc-bg-dots" aria-hidden="true" />
@@ -172,7 +172,7 @@ export function ScaleSection() {
               className={`sc-head-item sc-hd3 ${headIn ? "sc-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
-              At Â£10K/month, hustle built the business. Past Â£50K, only systems grow it. This section is the operator's manual for crossing that line â€” with your margins, your team, and your sanity intact.
+              At Â£10K/month, hustle built the business. Past Â£50K, only systems grow it. This section is the operator's manual for crossing that line — with your margins, your team, and your sanity intact.
             </p>
           </div>
 
@@ -235,7 +235,7 @@ export function ScaleSection() {
                 boxShadow:       `0 8px 24px rgba(201,168,76,0.3)`,
               }}
             >
-              Get the Scale Framework â€” $9.99
+              Get the Scale Framework — $9.99
             </a>
           </div>
 

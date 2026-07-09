@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useInView } from "react-intersection-observer";
 
@@ -10,7 +10,7 @@ const NAVY = "#000025";
 const TRUST = [
   { emoji: "ðŸ”’", label: "Secure Checkout"          },
   { emoji: "ðŸ“¦", label: "Ships Worldwide"           },
-  { emoji: "âš¡", label: "Instant E-book Delivery"  },
+  { emoji: "⚡", label: "Instant E-book Delivery"  },
   { emoji: "â­", label: "Rated 5 Stars"             },
 ];
 
@@ -76,7 +76,7 @@ export function CtaSection() {
           animation: ct-fade-up 0.65s ease-out 0.58s both;
         }
 
-        /* â”€â”€ subtle scale pulse on primary button wrapper (1.0â†’1.02â†’1.0 every 3s) â”€â”€ */
+        /* â”€â”€ subtle scale pulse on primary button wrapper (1.0→1.02→1.0 every 3s) â”€â”€ */
         @keyframes ct-scale-pulse {
           0%,  10%, 100% { transform: scale(1); }
           5%              { transform: scale(1.02); }
@@ -157,7 +157,7 @@ export function CtaSection() {
         className="relative overflow-hidden py-[140px]"
         aria-label="Get the book"
       >
-        {/* â”€â”€ Gold radial glow â€” static warm presence behind headline â”€â”€ */}
+        {/* â”€â”€ Gold radial glow — static warm presence behind headline â”€â”€ */}
         <div
           aria-hidden="true"
           style={{
@@ -197,10 +197,10 @@ export function CtaSection() {
             One Decision.
           </p>
 
-          {/* â”€â”€ Book images â€” float in from opposite sides â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+          {/* â”€â”€ Book images — float in from opposite sides â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div className="mb-10 flex items-end justify-center gap-10 sm:gap-16">
 
-            {/* Hardcopy â€” slides from left, tilts inward (+3deg so top leans right) */}
+            {/* Hardcopy — slides from left, tilts inward (+3deg so top leans right) */}
             <div
               className={`ct-book-left ${inView ? "ct-in" : ""}`}
             >
@@ -211,7 +211,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/book.png"
-                  alt="7-Figure Agency Mindset A-Z â€” Hardcopy"
+                  alt="7-Figure Agency Mindset A-Z — Hardcopy"
                   width={200}
                   height={260}
                   className="h-[190px] w-auto rounded-xl sm:h-[220px]"
@@ -228,7 +228,7 @@ export function CtaSection() {
               </div>
             </div>
 
-            {/* E-book â€” slides from right, tilts inward (-3deg so top leans left) */}
+            {/* E-book — slides from right, tilts inward (-3deg so top leans left) */}
             <div
               className={`ct-book-right ${inView ? "ct-in" : ""}`}
             >
@@ -239,7 +239,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/book.png"
-                  alt="7-Figure Agency Mindset A-Z â€” E-book"
+                  alt="7-Figure Agency Mindset A-Z — E-book"
                   width={200}
                   height={260}
                   className="h-[190px] w-auto rounded-xl sm:h-[220px]"
@@ -273,14 +273,14 @@ export function CtaSection() {
           >
             Hamid spent a decade and millions in real agency revenue building what&rsquo;s in this book.
             Every system was tested on real clients, in real markets, with real money on the line.
-            You&rsquo;re getting the distilled result for $9.99 â€” and there&rsquo;s no version of that trade that doesn&rsquo;t make sense.
+            You&rsquo;re getting the distilled result for $9.99 — and there&rsquo;s no version of that trade that doesn&rsquo;t make sense.
           </p>
 
           {/* â”€â”€ CTA Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className={`ct-btns ${inView ? "ct-in" : ""} flex flex-col items-center justify-center gap-4 sm:flex-row`}
           >
-            {/* Primary â€” gold, pulsing wrapper */}
+            {/* Primary — gold, pulsing wrapper */}
             <div className="ct-pulse-wrap">
               <a
                 href="https://hamidthepro.com/?add-to-cart=9853&quantity=1"
@@ -288,11 +288,11 @@ export function CtaSection() {
                 rel="noopener noreferrer"
                 className="ct-btn-gold"
               >
-                Get the E-book â€” $9.99
+                Get the E-book — $9.99
               </a>
             </div>
 
-            {/* Secondary â€” white outline */}
+            {/* Secondary — white outline */}
             <a
               href="https://hamidthepro.com/?add-to-cart=6261&quantity=1"
               target="_blank"
@@ -317,7 +317,7 @@ export function CtaSection() {
                   <span aria-hidden="true">{emoji}</span>
                   <span>{label}</span>
                 </span>
-                {/* Pipe separator â€” not after last item */}
+                {/* Pipe separator — not after last item */}
                 {i < TRUST.length - 1 && (
                   <span
                     aria-hidden="true"
@@ -343,7 +343,7 @@ export function CtaSection() {
             className={`ct-copy ${inView ? "ct-in" : ""} mt-6 text-center text-[12px]`}
             style={{ color: "rgba(255,255,255,0.24)" }}
           >
-            &copy; 2026 Hamid The Pro â€” 7 Figure Agency. All rights reserved.
+            &copy; 2026 Hamid The Pro — 7 Figure Agency. All rights reserved.
           </p>
 
         </div>
