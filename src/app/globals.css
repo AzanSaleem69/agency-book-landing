@@ -59,6 +59,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -67,6 +68,7 @@
     -moz-osx-font-smoothing: grayscale;
     color: var(--color-slate-900);
     background-color: #ffffff;
+    overflow-x: hidden;
   }
 
   ::selection {

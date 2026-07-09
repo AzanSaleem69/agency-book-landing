@@ -154,7 +154,7 @@ export function CtaSection() {
         id="final-cta"
         ref={ref}
         style={{ backgroundColor: NAVY }}
-        className="relative overflow-hidden py-[140px]"
+        className="relative overflow-hidden py-20 sm:py-[140px]"
         aria-label="Get the book"
       >
         {/* ── Gold radial glow — static warm presence behind headline ── */}
@@ -198,7 +198,7 @@ export function CtaSection() {
           </p>
 
           {/* ── Book images — float in from opposite sides ─────────── */}
-          <div className="mb-10 flex items-end justify-center gap-10 sm:gap-16">
+          <div className="mb-10 flex items-end justify-center gap-6 sm:gap-16">
 
             {/* Hardcopy — slides from left, tilts inward (+3deg so top leans right) */}
             <div
@@ -214,7 +214,7 @@ export function CtaSection() {
                   alt="7-Figure Agency Mindset A-Z — Hardcopy"
                   width={200}
                   height={260}
-                  className="h-[190px] w-auto rounded-xl sm:h-[220px]"
+                  className="h-[140px] w-auto rounded-xl sm:h-[190px] lg:h-[220px]"
                   style={{
                     boxShadow: "0 32px 64px rgba(0,0,0,0.65), 0 0 48px rgba(201,168,76,0.08)",
                   }}
@@ -242,7 +242,7 @@ export function CtaSection() {
                   alt="7-Figure Agency Mindset A-Z — E-book"
                   width={200}
                   height={260}
-                  className="h-[190px] w-auto rounded-xl sm:h-[220px]"
+                  className="h-[140px] w-auto rounded-xl sm:h-[190px] lg:h-[220px]"
                   style={{
                     boxShadow: "0 32px 64px rgba(0,0,0,0.65), 0 0 48px rgba(201,168,76,0.08)",
                   }}
@@ -259,7 +259,7 @@ export function CtaSection() {
 
           {/* ── Headline ─────────────────────────────────────────────── */}
           <h2
-            className={`ct-headline ${inView ? "ct-in" : ""} mx-auto mb-7 max-w-3xl text-center text-[44px] font-bold leading-[1.05] tracking-tight text-white sm:text-[60px] lg:text-[80px]`}
+            className={`ct-headline ${inView ? "ct-in" : ""} mx-auto mb-7 max-w-3xl text-center text-[32px] font-bold leading-[1.05] tracking-tight text-white sm:text-[52px] lg:text-[72px]`}
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Stop Building Your Agency on Instinct.{" "}

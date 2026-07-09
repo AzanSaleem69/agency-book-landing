@@ -206,7 +206,7 @@ export function AuthorSection() {
 
               {/* Name */}
               <h2
-                className="text-[42px] font-bold leading-[1.05] tracking-tight text-white sm:text-5xl"
+                className="text-[30px] font-bold leading-[1.05] tracking-tight text-white sm:text-[42px]"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Hamid Mahmood

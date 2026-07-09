@@ -88,7 +88,7 @@ export function BookHero() {
       {/* ── section ─────────────────────────────────────────────────────── */}
       <section
         style={{ backgroundColor: NAVY }}
-        className="relative overflow-hidden py-[120px]"
+        className="relative overflow-hidden py-16 sm:py-24 lg:py-[120px]"
         aria-label="Hero"
       >
         {/* Animated dot-matrix background */}
@@ -130,8 +130,8 @@ export function BookHero() {
 
               {/* Subheadline */}
               <p
-                className="bh-item bh-d3 leading-relaxed"
-                style={{ color: "#A8A8C0", fontSize: "20px" }}
+                className="bh-item bh-d3 text-[17px] sm:text-[20px] leading-relaxed"
+                style={{ color: "#A8A8C0" }}
               >
                 The A-to-Z playbook for digital marketing agency owners who are
                 done improvising — and ready to build, sell, and scale with a

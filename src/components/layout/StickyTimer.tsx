@@ -158,9 +158,9 @@ export function StickyTimer() {
           </div>
 
           {/* Centre — message */}
-          <p className="flex-1 text-center text-[13px] font-bold leading-tight text-white sm:text-[14px]">
-            <span className="sm:hidden">⚡ </span>
-            Grab your copy — price resets when the timer hits zero
+          <p className="flex-1 text-center text-[11px] font-bold leading-tight text-white sm:text-[14px]">
+            <span className="sm:hidden">⚡ Offer ends soon</span>
+            <span className="hidden sm:inline">Grab your copy — price resets when the timer hits zero</span>
           </p>
 
           {/* Right — 4-unit timer + CTA */}
@@ -172,23 +172,21 @@ export function StickyTimer() {
               aria-live="polite"
               aria-label={`${days} days ${hours} hours ${mins} minutes ${sec} seconds remaining`}
             >
-              {/* DAYS */}
-              <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
-                <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(days)}</span>
-                <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Days</span>
+              {/* DAYS + HOURS — hidden on mobile to save space */}
+              <div className="hidden sm:flex items-center gap-1">
+                <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
+                  <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(days)}</span>
+                  <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Days</span>
+                </div>
+                <span className="st-sep" aria-hidden="true">:</span>
+                <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
+                  <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(hours)}</span>
+                  <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Hours</span>
+                </div>
+                <span className="st-sep" aria-hidden="true">:</span>
               </div>
 
-              <span className="st-sep" aria-hidden="true">:</span>
-
-              {/* HOURS */}
-              <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
-                <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(hours)}</span>
-                <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Hours</span>
-              </div>
-
-              <span className="st-sep" aria-hidden="true">:</span>
-
-              {/* MINS */}
+              {/* MINS — always visible */}
               <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
                 <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(mins)}</span>
                 <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Mins</span>
@@ -196,7 +194,7 @@ export function StickyTimer() {
 
               <span className="st-sep" aria-hidden="true">:</span>
 
-              {/* SECS */}
+              {/* SECS — always visible */}
               <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
                 <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(sec)}</span>
                 <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Secs</span>
