@@ -1,37 +1,37 @@
-"use client";
+﻿"use client";
 
 import { useInView } from "react-intersection-observer";
 import { Crosshair, Link2, Search, Megaphone, type LucideIcon } from "lucide-react";
 
-// ─── constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
 
-// ─── card data ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ card data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const channels: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  Crosshair,
     title: "Outbound Prospecting",
-    body:  "Direct outreach systems that connect you with decision-makers — without spamming, without automation junk, and without burning your reputation.",
+    body:  "Direct outreach systems that connect you with decision-makers â€” without spamming, without automation junk, and without burning your reputation.",
   },
   {
     icon:  Link2,
     title: "Referral Systems",
-    body:  "Convert your best clients into a structured referral engine. A system that generates warm introductions consistently — not just when you get lucky.",
+    body:  "Convert your best clients into a structured referral engine. A system that generates warm introductions consistently â€” not just when you get lucky.",
   },
   {
     icon:  Search,
     title: "SEO as a Growth Channel",
-    body:  "How agencies can use their own SEO presence as a 24/7 lead generation asset — and why most don't, to their detriment.",
+    body:  "How agencies can use their own SEO presence as a 24/7 lead generation asset â€” and why most don't, to their detriment.",
   },
   {
     icon:  Megaphone,
     title: "Paid Advertising",
-    body:  "High-ROI paid campaigns built specifically for service businesses — not e-commerce templates repurposed and hoped for the best.",
+    body:  "High-ROI paid campaigns built specifically for service businesses â€” not e-commerce templates repurposed and hoped for the best.",
   },
 ];
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function LeadSection() {
   const { ref: headRef,  inView: headIn  } = useInView({ triggerOnce: true, threshold: 0.25 });
   const { ref: cardsRef, inView: cardsIn } = useInView({ triggerOnce: true, threshold: 0.1  });
@@ -39,9 +39,9 @@ export function LeadSection() {
 
   return (
     <>
-      {/* ── scoped styles ──────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
-        /* ── header ── */
+        /* â”€â”€ header â”€â”€ */
         @keyframes ld-fade-up {
           from { opacity: 0; transform: translateY(22px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -56,8 +56,8 @@ export function LeadSection() {
 
         /*
          * Two-layer card approach (same pattern as prior sections):
-         *   .ld-wrap  → entrance with stagger delay
-         *   .ld-card  → hover with zero delay
+         *   .ld-wrap  â†’ entrance with stagger delay
+         *   .ld-card  â†’ hover with zero delay
          */
         .ld-wrap {
           opacity: 0;
@@ -98,7 +98,7 @@ export function LeadSection() {
           background-color: rgba(201,168,76,0.22);
         }
 
-        /* ── diagonal shape at bottom of white area ── */
+        /* â”€â”€ diagonal shape at bottom of white area â”€â”€ */
         .ld-diagonal-bridge {
           display: block;
           width: 100%;
@@ -110,7 +110,7 @@ export function LeadSection() {
           width: 100%;
         }
 
-        /* ── bottom navy strip slides up ── */
+        /* â”€â”€ bottom navy strip slides up â”€â”€ */
         @keyframes ld-strip-up {
           from { opacity: 0; transform: translateY(36px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -127,7 +127,7 @@ export function LeadSection() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* ── Header ──────────────────────────────────────────────── */}
+          {/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div ref={headRef} className="mx-auto mb-14 max-w-2xl text-center">
             <p
               className={`ld-head-item ld-hd1 ${headIn ? "ld-in" : ""} mb-4 text-[11px] font-black tracking-[0.22em] uppercase`}
@@ -147,11 +147,11 @@ export function LeadSection() {
               className={`ld-head-item ld-hd3 ${headIn ? "ld-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "#6B6B80" }}
             >
-              No pipeline, no agency. This section breaks down the four client acquisition channels that actually work for service businesses — with the exact approach for each one, not theory.
+              No pipeline, no agency. This section breaks down the four client acquisition channels that actually work for service businesses â€” with the exact approach for each one, not theory.
             </p>
           </div>
 
-          {/* ── 2 × 2 card grid ─────────────────────────────────────── */}
+          {/* â”€â”€ 2 Ã— 2 card grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             ref={cardsRef}
             className="grid gap-5 sm:grid-cols-2"
@@ -193,8 +193,8 @@ export function LeadSection() {
           </div>
         </div>
 
-        {/* ── Diagonal bridge + full-width navy strip ──────────────── */}
-        {/* SVG diagonal separator — full viewport width */}
+        {/* â”€â”€ Diagonal bridge + full-width navy strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+        {/* SVG diagonal separator â€” full viewport width */}
         <div className="ld-diagonal-bridge mt-16" aria-hidden="true">
           <svg
             viewBox="0 0 1440 52"
@@ -226,7 +226,7 @@ export function LeadSection() {
               className="mb-8 text-[15px] font-medium"
               style={{ color: GOLD }}
             >
-              Build a lead engine that brings in the right work — consistently, on your terms.
+              Build a lead engine that brings in the right work â€” consistently, on your terms.
             </p>
 
             {/* CTA */}
@@ -241,7 +241,7 @@ export function LeadSection() {
                 boxShadow:       "0 8px 24px rgba(201,168,76,0.25)",
               }}
             >
-              Build My Pipeline — $19
+              Build My Pipeline â€” $9
             </a>
           </div>
         </div>
@@ -250,3 +250,4 @@ export function LeadSection() {
     </>
   );
 }
+

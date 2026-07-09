@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useInView } from "react-intersection-observer";
 import {
@@ -6,22 +6,22 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-// ─── constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD  = "#C9A84C";
 const NAVY  = "#000D30";
 const CARD  = "#001A4D";
 
-// ─── card data ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ card data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  Users2,
     title: "Hiring People Who Actually Deliver",
-    body:  "The recruitment, vetting, and onboarding process for building a team that extends your output — not one that creates another management job you didn't sign up for.",
+    body:  "The recruitment, vetting, and onboarding process for building a team that extends your output â€” not one that creates another management job you didn't sign up for.",
   },
   {
     icon:  Zap,
     title: "Automating the Work That Drains You",
-    body:  "Identify the repetitive, low-leverage tasks eating your team's hours and replace them with documented systems and smart automation — so your people focus on client results.",
+    body:  "Identify the repetitive, low-leverage tasks eating your team's hours and replace them with documented systems and smart automation â€” so your people focus on client results.",
   },
   {
     icon:  Coins,
@@ -36,25 +36,25 @@ const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  ListChecks,
     title: "Building SOPs That Don't Live in Your Head",
-    body:  "If it only works when you're watching — it's not a system. Learn how to document, delegate, and quality-control your delivery so output stays consistent as the team grows.",
+    body:  "If it only works when you're watching â€” it's not a system. Learn how to document, delegate, and quality-control your delivery so output stays consistent as the team grows.",
   },
   {
     icon:  Target,
     title: "Growing Past Seven Figures Without Breaking",
-    body:  "The leadership mindset shifts, OKR frameworks, and decision-making structures that let you operate as a CEO — not the person who has to fix everything that goes wrong.",
+    body:  "The leadership mindset shifts, OKR frameworks, and decision-making structures that let you operate as a CEO â€” not the person who has to fix everything that goes wrong.",
   },
 ];
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function ScaleSection() {
   const { ref: headRef,  inView: headIn  } = useInView({ triggerOnce: true, threshold: 0.25 });
   const { ref: cardsRef, inView: cardsIn } = useInView({ triggerOnce: true, threshold: 0.1  });
 
   return (
     <>
-      {/* ── scoped styles ──────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
-        /* ── background particle drift ── */
+        /* â”€â”€ background particle drift â”€â”€ */
         @keyframes sc-dots-drift {
           0%   { background-position: 0 0; }
           100% { background-position: 36px 36px; }
@@ -72,7 +72,7 @@ export function ScaleSection() {
           animation: sc-dots-drift 14s linear infinite;
         }
 
-        /* ── header stagger ── */
+        /* â”€â”€ header stagger â”€â”€ */
         @keyframes sc-fade-up {
           from { opacity: 0; transform: translateY(22px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -87,8 +87,8 @@ export function ScaleSection() {
 
         /*
          * Two-layer card approach:
-         *   .sc-wrap  → entrance (opacity + translateY with stagger delay)
-         *   .sc-card  → hover (no delay, instant response)
+         *   .sc-wrap  â†’ entrance (opacity + translateY with stagger delay)
+         *   .sc-card  â†’ hover (no delay, instant response)
          */
         .sc-wrap {
           opacity: 0;
@@ -121,7 +121,7 @@ export function ScaleSection() {
             0 0 0 1px rgba(201,168,76,0.18);
         }
 
-        /* ── icon circle glow on hover ── */
+        /* â”€â”€ icon circle glow on hover â”€â”€ */
         .sc-icon-wrap {
           transition: background-color 0.22s ease;
         }
@@ -129,7 +129,7 @@ export function ScaleSection() {
           background-color: rgba(201,168,76,0.22);
         }
 
-        /* ── CTA ── */
+        /* â”€â”€ CTA â”€â”€ */
         .sc-cta { opacity: 0; }
         .sc-cta.sc-in {
           animation: sc-fade-up 0.55s ease-out 0.75s both;
@@ -139,14 +139,14 @@ export function ScaleSection() {
       <section
         style={{ backgroundColor: NAVY }}
         className="relative overflow-hidden py-24 sm:py-28"
-        aria-label="Phase Three — Scale"
+        aria-label="Phase Three â€” Scale"
       >
         {/* Animated dot particle background */}
         <div className="sc-bg-dots" aria-hidden="true" />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* ── Header ──────────────────────────────────────────────── */}
+          {/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div ref={headRef} className="mx-auto mb-14 max-w-2xl text-center">
 
             {/* Badge pill */}
@@ -155,7 +155,7 @@ export function ScaleSection() {
                 className="inline-block rounded-full px-4 py-1.5 text-[11px] font-black tracking-[0.18em] uppercase"
                 style={{ backgroundColor: GOLD, color: NAVY }}
               >
-                📈&nbsp; Phase Three: Scale
+                ðŸ“ˆ&nbsp; Phase Three: Scale
               </span>
             </div>
 
@@ -172,11 +172,11 @@ export function ScaleSection() {
               className={`sc-head-item sc-hd3 ${headIn ? "sc-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "rgba(255,255,255,0.55)" }}
             >
-              At £10K/month, hustle built the business. Past £50K, only systems grow it. This section is the operator's manual for crossing that line — with your margins, your team, and your sanity intact.
+              At Â£10K/month, hustle built the business. Past Â£50K, only systems grow it. This section is the operator's manual for crossing that line â€” with your margins, your team, and your sanity intact.
             </p>
           </div>
 
-          {/* ── 2 × 3 card grid ─────────────────────────────────────── */}
+          {/* â”€â”€ 2 Ã— 3 card grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             ref={cardsRef}
             className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
@@ -220,7 +220,7 @@ export function ScaleSection() {
             ))}
           </div>
 
-          {/* ── CTA ─────────────────────────────────────────────────── */}
+          {/* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className={`sc-cta ${cardsIn ? "sc-in" : ""} mt-14 flex justify-center`}
           >
@@ -235,7 +235,7 @@ export function ScaleSection() {
                 boxShadow:       `0 8px 24px rgba(201,168,76,0.3)`,
               }}
             >
-              Get the Scale Framework — $19
+              Get the Scale Framework â€” $9
             </a>
           </div>
 
@@ -244,3 +244,4 @@ export function ScaleSection() {
     </>
   );
 }
+

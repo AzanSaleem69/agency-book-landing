@@ -1,13 +1,13 @@
-"use client";
+﻿"use client";
 
 import { useInView } from "react-intersection-observer";
 import { Rocket, Handshake, TrendingUp, type LucideIcon } from "lucide-react";
 
-// ─── constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
 
-// ─── data ─────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const steps: {
   num: string;
   icon: LucideIcon;
@@ -20,34 +20,34 @@ const steps: {
     icon: Rocket,
     title: "Build the Right Foundation",
     body: "Nail your niche, build a brand positioning that commands premium rates, land your first high-value clients, and set up the operational backbone that holds up when you get busy.",
-    tag: "Chapters 1–9",
+    tag: "Chapters 1â€“9",
   },
   {
     num: "02",
     icon: Handshake,
     title: "Sell Without Pitching",
-    body: "Learn to sell without desperation. Package your services so the price becomes secondary. Build a closing system that converts high-ticket prospects — without chasing, discounting, or begging.",
-    tag: "Chapters 10–16",
+    body: "Learn to sell without desperation. Package your services so the price becomes secondary. Build a closing system that converts high-ticket prospects â€” without chasing, discounting, or begging.",
+    tag: "Chapters 10â€“16",
   },
   {
     num: "03",
     icon: TrendingUp,
     title: "Own the Business. Stop Running the Job.",
     body: "Hire and retain the right team, automate your delivery, multiply your revenue streams, and install the leadership infrastructure that lets your agency grow past you.",
-    tag: "Chapters 17–28",
+    tag: "Chapters 17â€“28",
   },
 ];
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function FrameworkSection() {
   const { ref: headRef,  inView: headIn  } = useInView({ triggerOnce: true, threshold: 0.25 });
   const { ref: stepsRef, inView: stepsIn } = useInView({ triggerOnce: true, threshold: 0.15 });
 
   return (
     <>
-      {/* ── scoped styles ──────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
-        /* ── header ── */
+        /* â”€â”€ header â”€â”€ */
         @keyframes fw-fade-up {
           from { opacity: 0; transform: translateY(22px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -60,7 +60,7 @@ export function FrameworkSection() {
         .fw-hd2.fw-in { animation-delay: 0.20s; }
         .fw-hd3.fw-in { animation-delay: 0.35s; }
 
-        /* ── dashed connecting line — draws L→R on scroll ── */
+        /* â”€â”€ dashed connecting line â€” draws Lâ†’R on scroll â”€â”€ */
         .fw-line-track {
           position: absolute;
           /* sits at the vertical center of the step-number text (approx 56px from top of card) */
@@ -87,7 +87,7 @@ export function FrameworkSection() {
           width: 100%;
         }
 
-        /* ── step cards — stagger up ── */
+        /* â”€â”€ step cards â€” stagger up â”€â”€ */
         .fw-card {
           opacity: 0;
           transform: translateY(30px);
@@ -123,7 +123,7 @@ export function FrameworkSection() {
           transform: translateY(-6px);
         }
 
-        /* ── CTA ── */
+        /* â”€â”€ CTA â”€â”€ */
         .fw-cta { opacity: 0; }
         .fw-cta.fw-in {
           animation: fw-fade-up 0.55s ease-out 0.7s both;
@@ -136,7 +136,7 @@ export function FrameworkSection() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* ── Header ──────────────────────────────────────────────── */}
+          {/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div ref={headRef} className="mx-auto max-w-2xl text-center">
 
             <p
@@ -157,14 +157,14 @@ export function FrameworkSection() {
               className={`fw-head-item fw-hd3 text-[17px] leading-relaxed ${headIn ? "fw-in" : ""}`}
               style={{ color: "#6B6B80" }}
             >
-              Three phases. Most agency owners never make it cleanly through all three — because nobody showed them what each one actually requires. This book does.
+              Three phases. Most agency owners never make it cleanly through all three â€” because nobody showed them what each one actually requires. This book does.
             </p>
           </div>
 
-          {/* ── Steps grid + connecting line ────────────────────────── */}
+          {/* â”€â”€ Steps grid + connecting line â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div ref={stepsRef} className="relative mt-16">
 
-            {/* Dashed line — desktop only */}
+            {/* Dashed line â€” desktop only */}
             <div className="fw-line-track hidden lg:block" aria-hidden="true">
               <div className={`fw-line-fill ${stepsIn ? "fw-in" : ""}`} />
             </div>
@@ -225,7 +225,7 @@ export function FrameworkSection() {
             </div>
           </div>
 
-          {/* ── Bottom CTA ───────────────────────────────────────────── */}
+          {/* â”€â”€ Bottom CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className={`fw-cta ${stepsIn ? "fw-in" : ""} mt-14 flex justify-center`}
           >
@@ -236,7 +236,7 @@ export function FrameworkSection() {
               className="rounded-xl px-9 py-4 text-[15px] font-black tracking-wide shadow-md transition-opacity hover:opacity-90"
               style={{ backgroundColor: GOLD, color: NAVY }}
             >
-              Get the Full Blueprint — $19
+              Get the Full Blueprint â€” $9
             </a>
           </div>
 
@@ -245,3 +245,4 @@ export function FrameworkSection() {
     </>
   );
 }
+

@@ -1,22 +1,22 @@
-"use client";
+﻿"use client";
 
 import { useInView } from "react-intersection-observer";
 import { CheckCircle2 } from "lucide-react";
 
-// ─── constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
 
-// ─── data ─────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const formats = [
   {
     id:       "hardcopy",
     label:    "Hardcopy",
     image:    "/book.png",
-    imageAlt: "7-Figure Agency Mindset A-Z — Hardcopy edition",
-    price:    "$19",
+    imageAlt: "7-Figure Agency Mindset A-Z â€” Hardcopy edition",
+    price:    "$9",
     benefits: [
-      "Physical copy — read anywhere, no screen required",
+      "Physical copy â€” read anywhere, no screen required",
       "Annotate, highlight, and revisit chapters easily",
       "Ships worldwide",
       "Ideal for deep reference reading",
@@ -29,10 +29,10 @@ const formats = [
     id:       "ebook",
     label:    "E-book",
     image:    "/book.png",
-    imageAlt: "7-Figure Agency Mindset A-Z — E-book edition",
-    price:    "$19",
+    imageAlt: "7-Figure Agency Mindset A-Z â€” E-book edition",
+    price:    "$9",
     benefits: [
-      "Instant access — start reading in under 60 seconds",
+      "Instant access â€” start reading in under 60 seconds",
       "Read on any device: phone, tablet, laptop",
       "Available on Amazon Kindle",
       "Searchable and portable",
@@ -43,16 +43,16 @@ const formats = [
   },
 ];
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function FormatSection() {
   const { ref: headRef,  inView: headIn  } = useInView({ triggerOnce: true, threshold: 0.25 });
   const { ref: cardsRef, inView: cardsIn } = useInView({ triggerOnce: true, threshold: 0.15 });
 
   return (
     <>
-      {/* ── scoped styles ──────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
-        /* ── header ── */
+        /* â”€â”€ header â”€â”€ */
         @keyframes fs-fade-up {
           from { opacity: 0; transform: translateY(22px); }
           to   { opacity: 1; transform: translateY(0); }
@@ -65,7 +65,7 @@ export function FormatSection() {
         .fs-hd2.fs-in { animation-delay: 0.18s; }
         .fs-hd3.fs-in { animation-delay: 0.30s; }
 
-        /* ── card slide-in from opposite sides ── */
+        /* â”€â”€ card slide-in from opposite sides â”€â”€ */
         @keyframes fs-slide-left {
           from { opacity: 0; transform: translateX(-44px); }
           to   { opacity: 1; transform: translateX(0); }
@@ -85,7 +85,7 @@ export function FormatSection() {
           animation: fs-slide-right 0.7s ease-out 0.15s both;
         }
 
-        /* ── e-book gradient border shimmer (3s loop) ── */
+        /* â”€â”€ e-book gradient border shimmer (3s loop) â”€â”€ */
         @keyframes fs-border-shimmer {
           0%   { background-position:   0% 50%; }
           50%  { background-position: 100% 50%; }
@@ -106,7 +106,7 @@ export function FormatSection() {
           animation:        fs-border-shimmer 3s ease-in-out infinite;
         }
 
-        /* ── shared card styles ── */
+        /* â”€â”€ shared card styles â”€â”€ */
         .fs-card {
           border-radius:    18px;
           background:       #ffffff;
@@ -127,7 +127,7 @@ export function FormatSection() {
           border:           1.5px solid rgba(0,0,37,0.08);
         }
 
-        /* ── CTA button transitions ── */
+        /* â”€â”€ CTA button transitions â”€â”€ */
         .fs-btn {
           transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -137,14 +137,14 @@ export function FormatSection() {
           box-shadow: 0 8px 20px rgba(0,0,0,0.18);
         }
 
-        /* ── benefit checkmark colour ── */
+        /* â”€â”€ benefit checkmark colour â”€â”€ */
         .fs-check { color: ${GOLD}; }
       `}</style>
 
       <section className="bg-white py-24 sm:py-28" aria-label="Choose your format">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
 
-          {/* ── Header ──────────────────────────────────────────────── */}
+          {/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div ref={headRef} className="mx-auto mb-14 max-w-2xl text-center">
             <p
               className={`fs-head-item fs-hd1 ${headIn ? "fs-in" : ""} mb-4 text-[11px] font-black tracking-[0.22em] uppercase`}
@@ -164,11 +164,11 @@ export function FormatSection() {
               className={`fs-head-item fs-hd3 ${headIn ? "fs-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "#6B6B80" }}
             >
-              Same 30 chapters. Full content in both. Whether you read at your desk or on the go — the only decision left is which format you prefer.
+              Same 30 chapters. Full content in both. Whether you read at your desk or on the go â€” the only decision left is which format you prefer.
             </p>
           </div>
 
-          {/* ── Two format cards ────────────────────────────────────── */}
+          {/* â”€â”€ Two format cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           {/* pt-8 on both columns reserves space for the e-book badge */}
           <div ref={cardsRef} className="grid gap-8 pt-8 sm:grid-cols-2">
 
@@ -180,7 +180,7 @@ export function FormatSection() {
                   key={id}
                   className={`${col} ${cardsIn ? "fs-in" : ""} relative`}
                 >
-                  {/* "Most Popular" badge — e-book only */}
+                  {/* "Most Popular" badge â€” e-book only */}
                   {featured && (
                     <div
                       className="absolute -top-8 left-0 right-0 flex justify-center"
@@ -228,7 +228,7 @@ export function FormatSection() {
             })}
           </div>
 
-          {/* ── Disclaimer ──────────────────────────────────────────── */}
+          {/* â”€â”€ Disclaimer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <p
             className="mt-8 text-center text-[13px] leading-relaxed"
             style={{ color: "#9898A8" }}
@@ -243,7 +243,7 @@ export function FormatSection() {
   );
 }
 
-// ─── card inner (extracted to avoid duplicating JSX) ─────────────────────────
+// â”€â”€â”€ card inner (extracted to avoid duplicating JSX) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function CardInner({
   image, imageAlt, label, price, benefits, ctaLabel, ctaHref, featured, cardClass,
 }: {
@@ -256,7 +256,7 @@ function CardInner({
 
   return (
     <div className={cardClass}>
-      {/* Book image — hardcopy gets a warm shadow + slight tilt, ebook gets a gold glow */}
+      {/* Book image â€” hardcopy gets a warm shadow + slight tilt, ebook gets a gold glow */}
       <div className="mb-6 flex justify-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -324,3 +324,4 @@ function CardInner({
     </div>
   );
 }
+

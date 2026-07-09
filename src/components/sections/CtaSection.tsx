@@ -1,34 +1,34 @@
-"use client";
+﻿"use client";
 
 import { useInView } from "react-intersection-observer";
 
-// ─── constants ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ constants â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
 
-// ─── trust items ──────────────────────────────────────────────────────────────
+// â”€â”€â”€ trust items â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const TRUST = [
-  { emoji: "🔒", label: "Secure Checkout"          },
-  { emoji: "📦", label: "Ships Worldwide"           },
-  { emoji: "⚡", label: "Instant E-book Delivery"  },
-  { emoji: "⭐", label: "Rated 5 Stars"             },
+  { emoji: "ðŸ”’", label: "Secure Checkout"          },
+  { emoji: "ðŸ“¦", label: "Ships Worldwide"           },
+  { emoji: "âš¡", label: "Instant E-book Delivery"  },
+  { emoji: "â­", label: "Rated 5 Stars"             },
 ];
 
-// ─── component ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function CtaSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.12 });
 
   return (
     <>
-      {/* ── scoped styles ──────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
-        /* ── shared fade-up ── */
+        /* â”€â”€ shared fade-up â”€â”€ */
         @keyframes ct-fade-up {
           from { opacity: 0; transform: translateY(26px); }
           to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ── book entrance ── */
+        /* â”€â”€ book entrance â”€â”€ */
         @keyframes ct-from-left {
           from { opacity: 0; transform: translateX(-54px); }
           to   { opacity: 1; transform: translateX(0); }
@@ -38,7 +38,7 @@ export function CtaSection() {
           to   { opacity: 1; transform: translateX(0); }
         }
 
-        /* ── continuous float (maintains per-element rotation via --rot) ── */
+        /* â”€â”€ continuous float (maintains per-element rotation via --rot) â”€â”€ */
         @keyframes ct-float {
           0%, 100% { transform: translateY(0px)   rotate(var(--rot, 0deg)); }
           50%       { transform: translateY(-11px) rotate(var(--rot, 0deg)); }
@@ -58,25 +58,25 @@ export function CtaSection() {
           animation: ct-from-right 0.78s ease-out 0.22s both;
         }
 
-        /* ── headline ── */
+        /* â”€â”€ headline â”€â”€ */
         .ct-headline { opacity: 0; }
         .ct-headline.ct-in {
           animation: ct-fade-up 0.7s ease-out 0.18s both;
         }
 
-        /* ── subtext ── */
+        /* â”€â”€ subtext â”€â”€ */
         .ct-subtext { opacity: 0; }
         .ct-subtext.ct-in {
           animation: ct-fade-up 0.65s ease-out 0.42s both;
         }
 
-        /* ── buttons row ── */
+        /* â”€â”€ buttons row â”€â”€ */
         .ct-btns { opacity: 0; }
         .ct-btns.ct-in {
           animation: ct-fade-up 0.65s ease-out 0.58s both;
         }
 
-        /* ── subtle scale pulse on primary button wrapper (1.0→1.02→1.0 every 3s) ── */
+        /* â”€â”€ subtle scale pulse on primary button wrapper (1.0â†’1.02â†’1.0 every 3s) â”€â”€ */
         @keyframes ct-scale-pulse {
           0%,  10%, 100% { transform: scale(1); }
           5%              { transform: scale(1.02); }
@@ -131,19 +131,19 @@ export function CtaSection() {
           transform:    translateY(-3px);
         }
 
-        /* ── trust row ── */
+        /* â”€â”€ trust row â”€â”€ */
         .ct-trust { opacity: 0; }
         .ct-trust.ct-in {
           animation: ct-fade-up 0.55s ease-out 0.75s both;
         }
 
-        /* ── copyright ── */
+        /* â”€â”€ copyright â”€â”€ */
         .ct-copy { opacity: 0; }
         .ct-copy.ct-in {
           animation: ct-fade-up 0.5s ease-out 0.9s both;
         }
 
-        /* ── eyebrow ── */
+        /* â”€â”€ eyebrow â”€â”€ */
         .ct-eyebrow { opacity: 0; }
         .ct-eyebrow.ct-in {
           animation: ct-fade-up 0.5s ease-out 0s both;
@@ -157,7 +157,7 @@ export function CtaSection() {
         className="relative overflow-hidden py-[140px]"
         aria-label="Get the book"
       >
-        {/* ── Gold radial glow — static warm presence behind headline ── */}
+        {/* â”€â”€ Gold radial glow â€” static warm presence behind headline â”€â”€ */}
         <div
           aria-hidden="true"
           style={{
@@ -173,7 +173,7 @@ export function CtaSection() {
           }}
         />
 
-        {/* ── Faint dot texture (matches BookHero density, very low opacity) ── */}
+        {/* â”€â”€ Faint dot texture (matches BookHero density, very low opacity) â”€â”€ */}
         <div
           aria-hidden="true"
           style={{
@@ -186,7 +186,7 @@ export function CtaSection() {
           }}
         />
 
-        {/* ── Main content ─────────────────────────────────────────── */}
+        {/* â”€â”€ Main content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
         <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 
           {/* Eyebrow */}
@@ -197,10 +197,10 @@ export function CtaSection() {
             One Decision.
           </p>
 
-          {/* ── Book images — float in from opposite sides ─────────── */}
+          {/* â”€â”€ Book images â€” float in from opposite sides â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div className="mb-10 flex items-end justify-center gap-10 sm:gap-16">
 
-            {/* Hardcopy — slides from left, tilts inward (+3deg so top leans right) */}
+            {/* Hardcopy â€” slides from left, tilts inward (+3deg so top leans right) */}
             <div
               className={`ct-book-left ${inView ? "ct-in" : ""}`}
             >
@@ -211,7 +211,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/book.png"
-                  alt="7-Figure Agency Mindset A-Z — Hardcopy"
+                  alt="7-Figure Agency Mindset A-Z â€” Hardcopy"
                   width={200}
                   height={260}
                   className="h-[190px] w-auto rounded-xl sm:h-[220px]"
@@ -228,7 +228,7 @@ export function CtaSection() {
               </div>
             </div>
 
-            {/* E-book — slides from right, tilts inward (-3deg so top leans left) */}
+            {/* E-book â€” slides from right, tilts inward (-3deg so top leans left) */}
             <div
               className={`ct-book-right ${inView ? "ct-in" : ""}`}
             >
@@ -239,7 +239,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/book.png"
-                  alt="7-Figure Agency Mindset A-Z — E-book"
+                  alt="7-Figure Agency Mindset A-Z â€” E-book"
                   width={200}
                   height={260}
                   className="h-[190px] w-auto rounded-xl sm:h-[220px]"
@@ -257,7 +257,7 @@ export function CtaSection() {
             </div>
           </div>
 
-          {/* ── Headline ─────────────────────────────────────────────── */}
+          {/* â”€â”€ Headline â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <h2
             className={`ct-headline ${inView ? "ct-in" : ""} mx-auto mb-7 max-w-3xl text-center text-[44px] font-bold leading-[1.05] tracking-tight text-white sm:text-[60px] lg:text-[80px]`}
             style={{ fontFamily: "var(--font-playfair)" }}
@@ -266,21 +266,21 @@ export function CtaSection() {
             <span style={{ color: GOLD }}>Start Building It on Design.</span>
           </h2>
 
-          {/* ── Subtext ──────────────────────────────────────────────── */}
+          {/* â”€â”€ Subtext â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <p
             className={`ct-subtext ${inView ? "ct-in" : ""} mx-auto mb-12 max-w-2xl text-center text-[18px] leading-relaxed`}
             style={{ color: "rgba(255,255,255,0.58)" }}
           >
             Hamid spent a decade and millions in real agency revenue building what&rsquo;s in this book.
             Every system was tested on real clients, in real markets, with real money on the line.
-            You&rsquo;re getting the distilled result for $19 — and there&rsquo;s no version of that trade that doesn&rsquo;t make sense.
+            You&rsquo;re getting the distilled result for $9 â€” and there&rsquo;s no version of that trade that doesn&rsquo;t make sense.
           </p>
 
-          {/* ── CTA Buttons ──────────────────────────────────────────── */}
+          {/* â”€â”€ CTA Buttons â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className={`ct-btns ${inView ? "ct-in" : ""} flex flex-col items-center justify-center gap-4 sm:flex-row`}
           >
-            {/* Primary — gold, pulsing wrapper */}
+            {/* Primary â€” gold, pulsing wrapper */}
             <div className="ct-pulse-wrap">
               <a
                 href="https://hamidthepro.com/?add-to-cart=9853&quantity=1"
@@ -288,11 +288,11 @@ export function CtaSection() {
                 rel="noopener noreferrer"
                 className="ct-btn-gold"
               >
-                Get the E-book — $19
+                Get the E-book â€” $9
               </a>
             </div>
 
-            {/* Secondary — white outline */}
+            {/* Secondary â€” white outline */}
             <a
               href="https://hamidthepro.com/?add-to-cart=6261&quantity=1"
               target="_blank"
@@ -303,7 +303,7 @@ export function CtaSection() {
             </a>
           </div>
 
-          {/* ── Trust row ────────────────────────────────────────────── */}
+          {/* â”€â”€ Trust row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className={`ct-trust ${inView ? "ct-in" : ""} mt-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-2`}
           >
@@ -317,7 +317,7 @@ export function CtaSection() {
                   <span aria-hidden="true">{emoji}</span>
                   <span>{label}</span>
                 </span>
-                {/* Pipe separator — not after last item */}
+                {/* Pipe separator â€” not after last item */}
                 {i < TRUST.length - 1 && (
                   <span
                     aria-hidden="true"
@@ -331,19 +331,19 @@ export function CtaSection() {
             ))}
           </div>
 
-          {/* ── Thin rule ────────────────────────────────────────────── */}
+          {/* â”€â”€ Thin rule â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <div
             className="mx-auto mt-12 h-px max-w-xs"
             style={{ background: "rgba(255,255,255,0.08)" }}
             aria-hidden="true"
           />
 
-          {/* ── Copyright ────────────────────────────────────────────── */}
+          {/* â”€â”€ Copyright â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
           <p
             className={`ct-copy ${inView ? "ct-in" : ""} mt-6 text-center text-[12px]`}
             style={{ color: "rgba(255,255,255,0.24)" }}
           >
-            &copy; 2026 Hamid The Pro — 7 Figure Agency. All rights reserved.
+            &copy; 2026 Hamid The Pro â€” 7 Figure Agency. All rights reserved.
           </p>
 
         </div>
@@ -351,3 +351,4 @@ export function CtaSection() {
     </>
   );
 }
+

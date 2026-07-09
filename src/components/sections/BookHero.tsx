@@ -1,17 +1,17 @@
-const GOLD = "#C9A84C";
+﻿const GOLD = "#C9A84C";
 const NAVY = "#000025";
 const WHITE = "#FFFFFF";
 
 const bullets = [
-  "Read by agency owners across 12+ countries — from solo operators to 20-person teams",
+  "Read by agency owners across 12+ countries â€” from solo operators to 20-person teams",
   "Covers the full agency lifecycle: foundation, client acquisition, scaling, and long-term legacy",
-  "Available in E-book (instant) and Hardcopy — both for $19",
+  "Available in E-book (instant) and Hardcopy â€” both for $9",
 ];
 
 export function BookHero() {
   return (
     <>
-      {/* ── scoped styles ───────────────────────────────────────────────── */}
+      {/* â”€â”€ scoped styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <style>{`
         /* Dot-matrix background drift */
         @keyframes bh-grid-drift {
@@ -50,7 +50,7 @@ export function BookHero() {
           animation: bh-grid-drift 20s linear infinite;
         }
 
-        /* Stagger helpers — opacity:0 + fill-mode:both keeps them hidden until anim starts */
+        /* Stagger helpers â€” opacity:0 + fill-mode:both keeps them hidden until anim starts */
         .bh-item {
           opacity: 0;
           animation-name: bh-fade-up;
@@ -85,7 +85,7 @@ export function BookHero() {
         }
       `}</style>
 
-      {/* ── section ─────────────────────────────────────────────────────── */}
+      {/* â”€â”€ section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section
         style={{ backgroundColor: NAVY }}
         className="relative overflow-hidden py-[120px]"
@@ -94,7 +94,7 @@ export function BookHero() {
         {/* Animated dot-matrix background */}
         <div className="bh-grid" aria-hidden="true" />
 
-        {/* Radial vignette — softens edges */}
+        {/* Radial vignette â€” softens edges */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -107,7 +107,7 @@ export function BookHero() {
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
 
-            {/* ── LEFT COLUMN ───────────────────────────────────────────── */}
+            {/* â”€â”€ LEFT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
             <div className="flex flex-col gap-7">
 
               {/* Badge */}
@@ -134,7 +134,7 @@ export function BookHero() {
                 style={{ color: "#A8A8C0", fontSize: "20px" }}
               >
                 The A-to-Z playbook for digital marketing agency owners who are
-                done improvising — and ready to build, sell, and scale with a
+                done improvising â€” and ready to build, sell, and scale with a
                 real operating framework behind them.
               </p>
 
@@ -166,7 +166,7 @@ export function BookHero() {
                   style={{ backgroundColor: GOLD, color: NAVY }}
                   className="rounded-xl px-7 py-3.5 text-[15px] font-black tracking-wide shadow-lg transition-opacity hover:opacity-90"
                 >
-                  Get Your Copy — $19
+                  Get Your Copy â€” $9
                 </a>
 
                 <a
@@ -185,13 +185,13 @@ export function BookHero() {
                 className="bh-item bh-d6 text-[13px] leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.45)" }}
               >
-                🔒 Secure Checkout&nbsp;&nbsp;·&nbsp;&nbsp;
-                📦 Ships Worldwide&nbsp;&nbsp;·&nbsp;&nbsp;
-                ⚡ Instant E-book Access
+                ðŸ”’ Secure Checkout&nbsp;&nbsp;Â·&nbsp;&nbsp;
+                ðŸ“¦ Ships Worldwide&nbsp;&nbsp;Â·&nbsp;&nbsp;
+                âš¡ Instant E-book Access
               </p>
             </div>
 
-            {/* ── RIGHT COLUMN ──────────────────────────────────────────── */}
+            {/* â”€â”€ RIGHT COLUMN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
             <div className="bh-book-col flex justify-center lg:justify-end">
               <div className="relative inline-block">
 
@@ -211,7 +211,7 @@ export function BookHero() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/book.png"
-                    alt="7-Figure Agency Mindset A-Z — book cover"
+                    alt="7-Figure Agency Mindset A-Z â€” book cover"
                     width={420}
                     height={560}
                     className="relative z-10 w-[260px] rounded-lg sm:w-[320px] lg:w-[400px]"
@@ -221,7 +221,7 @@ export function BookHero() {
                     }}
                   />
 
-                  {/* Overlay badge — bottom-right of book */}
+                  {/* Overlay badge â€” bottom-right of book */}
                   <div
                     className="absolute -bottom-3 -right-4 z-20 rounded-full px-4 py-2 text-[11px] font-black shadow-xl"
                     style={{
@@ -242,3 +242,4 @@ export function BookHero() {
     </>
   );
 }
+
