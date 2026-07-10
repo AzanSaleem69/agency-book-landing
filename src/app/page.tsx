@@ -9,7 +9,7 @@ import { ScaleSection }  from "@/components/sections/ScaleSection";
 import { LeadSection }    from "@/components/sections/LeadSection";
 import { BookContents }        from "@/components/sections/BookContents";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { FormatSection }       from "@/components/sections/FormatSection";
+import { UrgencySection }      from "@/components/sections/UrgencySection";
 import { CtaSection }          from "@/components/sections/CtaSection";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
         <LeadSection />
         <BookContents />
         <TestimonialsSection />
-        <FormatSection />
+        <UrgencySection />
         <CtaSection />
       </main>
     </>
