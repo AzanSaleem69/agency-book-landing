@@ -167,7 +167,7 @@ export function StickyTimer() {
 
           {/* Centre text — desktop only, never wraps */}
           <p className="hidden flex-1 overflow-hidden truncate whitespace-nowrap text-center text-[13px] font-bold text-white sm:block">
-            Grab your copy — price resets when the timer hits zero
+            Hurry — price resets at zero!
           </p>
 
           {/* Mobile spacer pushes timer + button to right */}
