@@ -165,8 +165,8 @@ export function StickyTimer() {
             </span>
           </div>
 
-          {/* Centre text — desktop only */}
-          <p className="hidden flex-1 text-center text-[14px] font-bold leading-tight text-white sm:block">
+          {/* Centre text — desktop only, never wraps */}
+          <p className="hidden flex-1 overflow-hidden truncate whitespace-nowrap text-center text-[13px] font-bold text-white sm:block">
             Grab your copy — price resets when the timer hits zero
           </p>
 

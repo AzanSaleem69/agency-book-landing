@@ -275,7 +275,7 @@ export function TestimonialsSection() {
         className="overflow-hidden"
         style={{
           backgroundColor: BG,
-          paddingTop:    "clamp(2.5rem, 6vw, 5rem)",
+          paddingTop:    "clamp(1.25rem, 3vw, 2.5rem)",
           paddingBottom: "clamp(3rem, 7vw, 6rem)",
         }}
       >
