@@ -221,7 +221,7 @@ export function AuthorSection() {
               >
                 Founder,{" "}
                 <a
-                  href="https://hamidthepro.com"
+                  href="https://softwareprodigital.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: GOLD, textDecoration: "underline", textUnderlineOffset: "3px" }}
