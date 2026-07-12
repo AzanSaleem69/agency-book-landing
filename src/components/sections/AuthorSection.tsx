@@ -180,12 +180,13 @@ export function AuthorSection() {
                 {/* Photo */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/hamid.png"
-                  alt="Hamid Mahmood — Author of 7-Figure Agency Mindset A-Z"
+                  src="/book2.jpeg"
+                  alt="Hamid Mahmood reading 7-Figure Agency Mindset A-Z overlooking New York City"
                   width={480}
-                  height={420}
-                  className="relative z-10 w-full max-w-[420px] rounded-2xl object-cover"
+                  height={540}
+                  className="relative z-10 w-full max-w-[420px] rounded-2xl object-cover object-top"
                   style={{
+                    aspectRatio: "4/5",
                     boxShadow: `0 0 0 2px rgba(201,168,76,0.5), 0 32px 64px rgba(0,0,0,0.55), 0 0 80px rgba(201,168,76,0.08)`,
                   }}
                 />
