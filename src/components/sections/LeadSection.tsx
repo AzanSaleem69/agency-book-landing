@@ -12,22 +12,22 @@ const channels: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  Crosshair,
     title: "Outbound Prospecting",
-    body:  "Direct outreach systems that connect you with decision-makers — without spamming, without automation junk, and without burning your reputation.",
+    body:  "Direct outreach that gets you in front of decision-makers. No spam, no mass automation, no burning bridges with people you actually want to work with.",
   },
   {
     icon:  Link2,
     title: "Referral Systems",
-    body:  "Convert your best clients into a structured referral engine. A system that generates warm introductions consistently — not just when you get lucky.",
+    body:  "Turn your best clients into a referral engine that runs on its own. Warm introductions should come in regularly, not just when you happen to get lucky.",
   },
   {
     icon:  Search,
     title: "SEO as a Growth Channel",
-    body:  "How agencies can use their own SEO presence as a 24/7 lead generation asset — and why most don't, to their detriment.",
+    body:  "Your agency's own SEO can generate leads around the clock. Most agencies skip this entirely and wonder why their pipeline dries up between projects.",
   },
   {
     icon:  Megaphone,
     title: "Paid Advertising",
-    body:  "High-ROI paid campaigns built specifically for service businesses — not e-commerce templates repurposed and hoped for the best.",
+    body:  "Paid campaigns built for service businesses specifically. Not e-commerce frameworks someone repackaged and sold as a universal solution.",
   },
 ];
 
@@ -147,7 +147,7 @@ export function LeadSection() {
               className={`ld-head-item ld-hd3 ${headIn ? "ld-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "#6B6B80" }}
             >
-              No pipeline, no agency. This section breaks down the four client acquisition channels that actually work for service businesses — with the exact approach for each one, not theory.
+              No pipeline, no agency. This section covers the four channels that actually bring in clients for service businesses, with a specific approach for each one.
             </p>
           </div>
 

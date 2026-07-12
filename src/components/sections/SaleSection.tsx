@@ -11,17 +11,17 @@ const PILLARS = [
   {
     num:   "01",
     title: "The Sales Conversation, Rebuilt",
-    body:  "A structured framework that removes the awkwardness, handles real objections — budget, timing, trust — and moves qualified prospects to a decision without pressure tactics that destroy long-term reputation.",
+    body:  "A structured approach that takes the awkwardness out of selling. It handles the real objections (budget, timing, trust) and moves the right prospects to a decision without tactics that damage the relationship.",
   },
   {
     num:   "02",
     title: "Packaging Services Clients Can't Refuse",
-    body:  "How to structure your offer so the value is self-evident and the price becomes the easiest part of the conversation. Includes the exact proposal format used to close five-figure agency contracts.",
+    body:  "How to structure your offer so the value is obvious and the price stops being the issue. Includes the proposal format Hamid used to close five-figure contracts.",
   },
   {
     num:   "03",
     title: "Raising Your Rates Without Losing Anyone",
-    body:  "The repositioning and communication sequence for increasing prices with existing clients — while actually strengthening the relationship. Most agency owners never attempt this. The ones who do rarely go back.",
+    body:  "How to increase your prices with existing clients while keeping the relationship solid. Most agency owners never try this. The ones who do stop going back to lower rates.",
   },
 ];
 

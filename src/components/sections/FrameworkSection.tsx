@@ -19,21 +19,21 @@ const steps: {
     num: "01",
     icon: Rocket,
     title: "Build the Right Foundation",
-    body: "Nail your niche, build a brand positioning that commands premium rates, land your first high-value clients, and set up the operational backbone that holds up when you get busy.",
+    body: "Pick the right niche, set pricing that reflects real value, land your first quality clients, and build the operational backbone before you're too busy to think.",
     tag: "Chapters 1–9",
   },
   {
     num: "02",
     icon: Handshake,
     title: "Sell Without Pitching",
-    body: "Learn to sell without desperation. Package your services so the price becomes secondary. Build a closing system that converts high-ticket prospects — without chasing, discounting, or begging.",
+    body: "Package your services so the price is never the issue. Build a sales process that closes high-ticket clients without chasing, discounting, or desperation.",
     tag: "Chapters 10–16",
   },
   {
     num: "03",
     icon: TrendingUp,
     title: "Own the Business. Stop Running the Job.",
-    body: "Hire and retain the right team, automate your delivery, multiply your revenue streams, and install the leadership infrastructure that lets your agency grow past you.",
+    body: "Hire people who actually deliver, systematize your operations, add revenue streams, and build the leadership layer so the agency stops depending on you personally.",
     tag: "Chapters 17–28",
   },
 ];
@@ -157,7 +157,7 @@ export function FrameworkSection() {
               className={`fw-head-item fw-hd3 text-[17px] leading-relaxed ${headIn ? "fw-in" : ""}`}
               style={{ color: "#6B6B80" }}
             >
-              Three phases. Most agency owners never make it cleanly through all three — because nobody showed them what each one actually requires. This book does.
+              Three phases. Most agency owners never get through all three cleanly because nobody told them what each one actually takes. This book walks you through it.
             </p>
           </div>
 

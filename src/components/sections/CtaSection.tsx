@@ -271,9 +271,9 @@ export function CtaSection() {
             className={`ct-subtext ${inView ? "ct-in" : ""} mx-auto mb-12 max-w-2xl text-center text-[18px] leading-relaxed`}
             style={{ color: "rgba(255,255,255,0.58)" }}
           >
-            Hamid spent a decade and millions in real agency revenue building what&rsquo;s in this book.
-            Every system was tested on real clients, in real markets, with real money on the line.
-            You&rsquo;re getting the distilled result for $9.99 — and there&rsquo;s no version of that trade that doesn&rsquo;t make sense.
+            Hamid spent a decade building a multi-seven-figure agency before writing a single page of this book.
+            Every system in it came from actual client work, actual failures, and actual money at stake.
+            You get all of that for $9.99.
           </p>
 
           {/* ── CTA Buttons ──────────────────────────────────────────── */}

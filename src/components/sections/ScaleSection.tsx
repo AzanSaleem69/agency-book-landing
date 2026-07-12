@@ -16,32 +16,32 @@ const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon:  Users2,
     title: "Hiring People Who Actually Deliver",
-    body:  "The recruitment, vetting, and onboarding process for building a team that extends your output — not one that creates another management job you didn't sign up for.",
+    body:  "How to recruit, vet, and onboard people who extend what you can do, not people who just give you another thing to manage.",
   },
   {
     icon:  Zap,
     title: "Automating the Work That Drains You",
-    body:  "Identify the repetitive, low-leverage tasks eating your team's hours and replace them with documented systems and smart automation — so your people focus on client results.",
+    body:  "Find the repetitive tasks eating your team's time and replace them with clean systems and smart tools. Your people should be focused on client work, not admin.",
   },
   {
     icon:  Coins,
     title: "Adding Revenue Without Adding Clients",
-    body:  "The strategies for building upsell pathways, retainer structures, and recurring revenue streams that grow your income from the client base you already have.",
+    body:  "Upsell pathways, retainer structures, and recurring revenue streams that let you grow income from the clients you already have.",
   },
   {
     icon:  Star,
     title: "Client Retention as a Growth Strategy",
-    body:  "Keeping a client is ten times cheaper than finding a new one. This section shows you the exact satisfaction and communication systems that eliminate churn and generate referrals on autopilot.",
+    body:  "Keeping a client costs far less than finding a new one. Learn the communication and delivery systems that cut churn and bring in referrals without asking for them.",
   },
   {
     icon:  ListChecks,
     title: "Building SOPs That Don't Live in Your Head",
-    body:  "If it only works when you're watching — it's not a system. Learn how to document, delegate, and quality-control your delivery so output stays consistent as the team grows.",
+    body:  "If it only works when you're in the room, it's not a system. Learn how to document and delegate so quality stays consistent as your team grows.",
   },
   {
     icon:  Target,
     title: "Growing Past Seven Figures Without Breaking",
-    body:  "The leadership mindset shifts, OKR frameworks, and decision-making structures that let you operate as a CEO — not the person who has to fix everything that goes wrong.",
+    body:  "The mindset shifts and operating structures that let you step into a CEO role instead of being the person who fixes everything when it goes wrong.",
   },
 ];
 

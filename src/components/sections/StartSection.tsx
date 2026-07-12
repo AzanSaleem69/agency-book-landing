@@ -11,27 +11,27 @@ const BG   = "#000D30";
 const cards = [
   {
     title: "Choosing a Niche That Actually Pays",
-    body:  "Not all niches are equal. This section shows you how to select a market where your expertise commands premium rates — and clients have money to spend.",
+    body:  "Not every niche pays the same. This shows you how to find one where your skills command real rates and clients actually have the budget to pay them.",
   },
   {
     title: "Landing Your First Premium Client",
-    body:  "Forget the 'take anything you can get' approach. The book shows you how to start with clients who pay well, respect boundaries, and come back.",
+    body:  "Forget taking whatever comes in. Learn how to go after clients who pay well, respect the process, and stick around.",
   },
   {
     title: "Pricing From Confidence, Not Fear",
-    body:  "The framework for setting rates that reflect real value — so you stop apologising for your price and start attracting clients who don't flinch at it.",
+    body:  "A clear framework for setting rates based on value. Stop second-guessing your prices and start working with clients who don't push back on every invoice.",
   },
   {
     title: "The 5 Mistakes That Kill New Agencies",
-    body:  "Documented from real agency failures — including the over-servicing trap, the wrong-client spiral, and the no-contract mistake that destroys cash flow.",
+    body:  "Pulled from real agency failures: over-servicing, chasing the wrong clients, skipping contracts, and three others that quietly drain cash flow.",
   },
   {
     title: "Build Your Systems Before You're Overwhelmed",
-    body:  "The agencies that scale cleanly set up SOPs, onboarding flows, and delivery workflows before they need them. This section shows you what to build first.",
+    body:  "Agencies that grow smoothly build their SOPs, onboarding flows, and delivery processes before they actually need them. Here is what to set up first.",
   },
   {
     title: "Position as the Expert, Not the Option",
-    body:  "Commodity agencies compete on price. Expert agencies set the price. This chapter shows you exactly how to make that shift in how your market perceives you.",
+    body:  "Commodity agencies fight over price. Expert agencies don't. This chapter covers exactly how to shift the way your market sees you.",
   },
 ];
 

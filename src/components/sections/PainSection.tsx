@@ -17,17 +17,17 @@ const cards: { icon: LucideIcon; title: string; body: string }[] = [
   {
     icon: FunnelX,
     title: "Revenue That Vanishes Between Projects",
-    body: "You land a strong month, then spend the next one scrambling to replace it. Without a repeatable client acquisition system, you're not running an agency — you're chasing one.",
+    body: "You land a strong month, then spend the next one scrambling to replace it. Without a repeatable system for bringing in clients, you're just chasing work.",
   },
   {
     icon: BadgeDollarSign,
     title: "Premium Work. Budget-Level Rates.",
-    body: "You're delivering results other agencies charge five figures for. But until your positioning matches your ability, you'll keep losing deals to cheaper competitors who look more 'established'.",
+    body: "You're delivering results other agencies charge five figures for. But until your positioning matches your ability, you'll keep losing to cheaper competitors who just look more put-together.",
   },
   {
     icon: RefreshCcw,
     title: "You're the CEO, Delivery Team, and Sales Dept",
-    body: "Every client escalation, every proposal, every fire routes through one person: you. That's not an agency — that's a very stressful freelance job with extra overhead.",
+    body: "Every escalation, every proposal, every fire goes through one person: you. That's not an agency. That's a stressful freelance job with more overhead.",
   },
 ];
 
