@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ─── constants ────────────────────────────────────────────────────────────────
 const GOLD  = "#C9A84C";
@@ -13,9 +13,11 @@ function pad(n: number) {
 
 // ─── component ────────────────────────────────────────────────────────────────
 export function StickyTimer() {
-  const [secs,    setSecs]    = useState(TOTAL);
-  const [visible, setVisible] = useState(false);
-  const [pulse,   setPulse]   = useState(false);
+  const [secs,      setSecs]      = useState(TOTAL);
+  const [visible,   setVisible]   = useState(false);
+  const [pulse,     setPulse]     = useState(false);
+  const [barHeight, setBarHeight] = useState(64);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 60);
@@ -34,6 +36,18 @@ export function StickyTimer() {
       });
     }, 1000);
     return () => clearInterval(id);
+  }, []);
+
+  // Keep the spacer in sync with the bar's real height (it changes
+  // between the stacked mobile/tablet layout and the single-row desktop one).
+  useEffect(() => {
+    const el = barRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => {
+      setBarHeight(entry.contentRect.height);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   const days  = Math.floor(secs / 86400);
@@ -139,82 +153,81 @@ export function StickyTimer() {
 
       {/* ── Full-width sticky bar ───────────────────────────────────── */}
       <div
+        ref={barRef}
         className={`st-bar ${visible ? "st-on" : ""}`}
         role="banner"
         aria-label="Limited time offer"
       >
-        <div className="flex h-[64px] w-full items-center px-4 sm:px-8"
-          style={{ gap: "0" }}>
+        {/*
+         * Below `lg` (tablet + mobile): stacked 2-row layout —
+         *   row 1: "Hurry Up! Hurry — price resets at zero!"
+         *   row 2: timer + CTA button
+         * At `lg` and up: everything back on a single 64px-tall row.
+         */}
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-2.5 px-4 py-3 sm:px-8 lg:h-[64px] lg:flex-row lg:justify-between lg:gap-0 lg:py-0">
 
-          {/* ── MOBILE layout: ⚡ | spacer | MINS:SECS | Buy button ── */}
-
-          {/* Left bolt — mobile only */}
-          <span
-            className="st-hurry mr-2 text-[18px] sm:hidden"
-            aria-hidden="true"
-          >⚡</span>
-
-          {/* Desktop "Hurry Up!" label */}
-          <div className="st-hurry hidden shrink-0 items-center gap-2 sm:flex">
-            <span style={{ fontSize: "16px" }} aria-hidden="true">⚡</span>
-            <span
-              className="text-[12px] font-black tracking-[0.14em] uppercase"
-              style={{ color: GOLD }}
-            >
-              Hurry Up!
+          {/* ── Hurry Up! + message ──────────────────────────────────── */}
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center lg:flex-nowrap lg:justify-start">
+            <span className="st-hurry flex items-center gap-1.5">
+              <span style={{ fontSize: "16px" }} aria-hidden="true">⚡</span>
+              <span
+                className="text-[11px] font-black tracking-[0.12em] uppercase sm:text-[12px] sm:tracking-[0.14em]"
+                style={{ color: GOLD }}
+              >
+                Hurry Up!
+              </span>
+            </span>
+            <span className="text-[12px] font-bold text-white sm:text-[13px]">
+              Hurry — price resets at zero!
             </span>
           </div>
 
-          {/* Centre text — desktop only, never wraps */}
-          <p className="hidden flex-1 overflow-hidden truncate whitespace-nowrap text-center text-[13px] font-bold text-white sm:block">
-            Hurry — price resets at zero!
-          </p>
+          {/* ── Timer + CTA ──────────────────────────────────────────── */}
+          <div className="flex shrink-0 items-center gap-3">
 
-          {/* Mobile spacer pushes timer + button to right */}
-          <div className="flex-1 sm:hidden" />
+            {/* Timer */}
+            <div
+              className="flex shrink-0 items-center gap-1"
+              aria-live="polite"
+              aria-label={`${days} days ${hours} hours ${mins} minutes ${sec} seconds remaining`}
+            >
+              {/* HOURS — always visible */}
+              <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
+                <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(hours)}</span>
+                <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Hrs</span>
+              </div>
+              <span className="st-sep" aria-hidden="true">:</span>
 
-          {/* Timer */}
-          <div
-            className="flex shrink-0 items-center gap-1"
-            aria-live="polite"
-            aria-label={`${days} days ${hours} hours ${mins} minutes ${sec} seconds remaining`}
-          >
-            {/* HOURS — always visible */}
-            <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
-              <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(hours)}</span>
-              <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Hrs</span>
+              {/* MINS */}
+              <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
+                <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(mins)}</span>
+                <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Mins</span>
+              </div>
+              <span className="st-sep" aria-hidden="true">:</span>
+              {/* SECS */}
+              <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
+                <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(sec)}</span>
+                <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Secs</span>
+              </div>
             </div>
-            <span className="st-sep" aria-hidden="true">:</span>
 
-            {/* MINS */}
-            <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
-              <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(mins)}</span>
-              <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Mins</span>
-            </div>
-            <span className="st-sep" aria-hidden="true">:</span>
-            {/* SECS */}
-            <div className={`st-box ${isUrgent ? "st-urgent" : ""} ${pulse ? "st-pulse" : ""}`}>
-              <span className={`st-num ${isUrgent ? "st-urgent" : ""}`}>{pad(sec)}</span>
-              <span className={`st-lbl ${isUrgent ? "st-urgent" : ""}`}>Secs</span>
-            </div>
+            {/* CTA — short on mobile, full text from sm up */}
+            <a
+              href="https://hamidthepro.com/?add-to-cart=9853&quantity=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="st-cta"
+            >
+              <span className="sm:hidden">Get it $9.99</span>
+              <span className="hidden sm:inline">Get the Book — $9.99&nbsp;→</span>
+            </a>
           </div>
-
-          {/* CTA — short on mobile, full text on desktop */}
-          <a
-            href="https://hamidthepro.com/?add-to-cart=9853&quantity=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="st-cta ml-3"
-          >
-            <span className="sm:hidden">Get it $9.99</span>
-            <span className="hidden sm:inline">Get the Book — $9.99&nbsp;→</span>
-          </a>
 
         </div>
       </div>
 
-      {/* Spacer — same height as bar */}
-      <div className="h-[64px]" aria-hidden="true" />
+      {/* Spacer — tracks the bar's real (responsive) height */}
+      <div style={{ height: barHeight }} aria-hidden="true" />
     </>
   );
 }
