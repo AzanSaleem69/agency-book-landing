@@ -1,4 +1,5 @@
 import { StickyTimer }  from "@/components/layout/StickyTimer";
+import { StickyAmazonBadge } from "@/components/layout/StickyAmazonBadge";
 import { BookHero }     from "@/components/sections/BookHero";
 import { SocialProofBar } from "@/components/sections/SocialProofBar";
 import { PainSection }   from "@/components/sections/PainSection";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <>
       <StickyTimer />
+      <StickyAmazonBadge />
       <main>
         <BookHero />
         <SocialProofBar />
