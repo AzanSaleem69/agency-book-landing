@@ -1,7 +1,6 @@
 import { StickyTimer }  from "@/components/layout/StickyTimer";
 import { StickyAmazonBadge } from "@/components/layout/StickyAmazonBadge";
 import { BookHero }     from "@/components/sections/BookHero";
-import { SocialProofBar } from "@/components/sections/SocialProofBar";
 import { PainSection }   from "@/components/sections/PainSection";
 import { AuthorSection }    from "@/components/sections/AuthorSection";
 import { FrameworkSection } from "@/components/sections/FrameworkSection";
@@ -22,7 +21,6 @@ export default function Home() {
       <StickyAmazonBadge />
       <main>
         <BookHero />
-        <SocialProofBar />
         <PainSection />
         <AuthorSection />
         <FrameworkSection />
