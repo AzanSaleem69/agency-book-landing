@@ -216,7 +216,7 @@ export function BookHero() {
                     alt="7-Figure Agency Mindset A-Z — book cover"
                     width={420}
                     height={560}
-                    className="relative z-10 w-[260px] rounded-lg sm:w-[320px] lg:w-[400px]"
+                    className="relative z-10 w-[230px] rounded-lg sm:w-[280px] lg:w-[350px]"
                     style={{
                       boxShadow:
                         "0 48px 80px rgba(0,0,0,0.55), 0 0 64px rgba(201,168,76,0.12)",
