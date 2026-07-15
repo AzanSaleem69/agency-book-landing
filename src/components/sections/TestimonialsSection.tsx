@@ -252,21 +252,6 @@ export function TestimonialsSection() {
           line-height: 1.65;
           color:       #3E4148;
         }
-
-        /* Stats */
-        .ts-stat-val {
-          font-size:   clamp(1.25rem, 2vw, 1.5rem);
-          font-weight: 900;
-          color:       ${GOLD};
-        }
-        .ts-stat-lbl {
-          font-size:      10px;
-          font-weight:    600;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          color:          rgba(255,255,255,0.38);
-          margin-top:     2px;
-        }
       `}</style>
 
       <section
@@ -337,20 +322,6 @@ export function TestimonialsSection() {
                 style={{ animationDelay: `${0.48 + i * 0.08}s` }}
               >
                 <TpCard r={r as typeof MEDIUM[2]} />
-              </div>
-            ))}
-          </div>
-
-          {/* Trust stats */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {[
-              { n: "500+", l: "Agency Owners"  },
-              { n: "12+",  l: "Countries"       },
-              { n: "4.9★", l: "Average Rating"  },
-            ].map(({ n, l }) => (
-              <div key={l} className="flex flex-col items-center gap-1">
-                <span className="ts-stat-val">{n}</span>
-                <span className="ts-stat-lbl">{l}</span>
               </div>
             ))}
           </div>
