@@ -138,7 +138,7 @@ export function ScaleSection() {
           src="/assets/seven-logo-sd87fsdf-1024x887.webp"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-1/2 hidden w-[420px] -translate-y-1/2 opacity-[0.08] sm:block lg:w-[560px]"
+          className="pointer-events-none absolute left-1/2 top-1/2 hidden w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-[0.08] sm:block lg:w-[560px]"
         />
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
