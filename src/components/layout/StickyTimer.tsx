@@ -178,7 +178,7 @@ export function StickyTimer() {
               </span>
             </span>
             <span className="text-[12px] font-bold text-white sm:text-[13px]">
-              This price disappears at zero!
+This price resets at zero!
             </span>
           </div>
 
