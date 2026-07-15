@@ -3,6 +3,7 @@ import { StickyAmazonBadge } from "@/components/layout/StickyAmazonBadge";
 import { BookHero }     from "@/components/sections/BookHero";
 import { PainSection }   from "@/components/sections/PainSection";
 import { AuthorSection }    from "@/components/sections/AuthorSection";
+import { AuthorVideoSection } from "@/components/sections/AuthorVideoSection";
 import { FrameworkSection } from "@/components/sections/FrameworkSection";
 import { StartSection }  from "@/components/sections/StartSection";
 import { SaleSection }   from "@/components/sections/SaleSection";
@@ -23,6 +24,7 @@ export default function Home() {
         <BookHero />
         <PainSection />
         <AuthorSection />
+        <AuthorVideoSection />
         <FrameworkSection />
         <StartSection />
         <SaleSection />
