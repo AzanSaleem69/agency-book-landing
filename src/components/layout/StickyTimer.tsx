@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useCountdown } from "@/lib/useCountdown";
 
 // ─── constants ────────────────────────────────────────────────────────────────
 const GOLD  = "#C9A84C";
@@ -13,30 +14,29 @@ function pad(n: number) {
 
 // ─── component ────────────────────────────────────────────────────────────────
 export function StickyTimer() {
-  const [secs,      setSecs]      = useState(TOTAL);
+  const secs = useCountdown(TOTAL);
   const [visible,   setVisible]   = useState(false);
   const [pulse,     setPulse]     = useState(false);
   const [barHeight, setBarHeight] = useState(64);
   const barRef = useRef<HTMLDivElement>(null);
+  const prevSecsRef = useRef(secs);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 60);
     return () => clearTimeout(t);
   }, []);
 
+  // Pulse the digits whenever the countdown rolls over to a fresh deadline
+  // (detected as the remaining time jumping up instead of counting down).
   useEffect(() => {
-    const id = setInterval(() => {
-      setSecs(s => {
-        if (s <= 1) {
-          setPulse(true);
-          setTimeout(() => setPulse(false), 700);
-          return TOTAL;
-        }
-        return s - 1;
-      });
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
+    if (secs > prevSecsRef.current) {
+      setPulse(true);
+      const t = setTimeout(() => setPulse(false), 700);
+      prevSecsRef.current = secs;
+      return () => clearTimeout(t);
+    }
+    prevSecsRef.current = secs;
+  }, [secs]);
 
   // Keep the spacer in sync with the bar's real height (it changes
   // between the stacked mobile/tablet layout and the single-row desktop one).
@@ -178,7 +178,7 @@ export function StickyTimer() {
               </span>
             </span>
             <span className="text-[12px] font-bold text-white sm:text-[13px]">
-              Hurry — price resets at zero!
+              This price disappears at zero!
             </span>
           </div>
 

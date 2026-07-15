@@ -125,7 +125,9 @@ export function BookHero() {
                 className="bh-item bh-d2 f-hero font-bold tracking-tight text-white"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                You Don't Have an Agency Problem. You Have a Systems Problem.
+                You Don&apos;t Have an Agency Problem.
+                You Have a{" "}
+                <span style={{ color: GOLD }}>Systems Problem.</span>
               </h1>
 
               {/* Subheadline */}

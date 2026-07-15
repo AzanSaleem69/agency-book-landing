@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Flame, Zap } from "lucide-react";
+import { useCountdown } from "@/lib/useCountdown";
 
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
@@ -13,11 +13,7 @@ function pad(n: number) { return String(n).padStart(2, "0"); }
 export function UrgencySection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const [secs, setSecs] = useState(TOTAL);
-  useEffect(() => {
-    const id = setInterval(() => setSecs(s => (s <= 1 ? TOTAL : s - 1)), 1000);
-    return () => clearInterval(id);
-  }, []);
+  const secs = useCountdown(TOTAL);
 
   const days  = Math.floor(secs / 86400);
   const hours = Math.floor((secs % 86400) / 3600);
