@@ -55,9 +55,8 @@ export function LeadSection() {
         .ld-hd3.ld-in { animation-delay: 0.30s; }
 
         /*
-         * Two-layer card approach (same pattern as prior sections):
-         *   .ld-wrap  → entrance with stagger delay
-         *   .ld-card  → hover with zero delay
+         * Horizontal icon-band layout — deliberately un-card-like, to break
+         * up the run of boxed-card grids used by the sections around it.
          */
         .ld-wrap {
           opacity: 0;
@@ -71,31 +70,24 @@ export function LeadSection() {
             transform 0.55s ease-out var(--d, 0s);
         }
 
-        .ld-card {
+        .ld-icon {
           background:    #ffffff;
-          border-radius: 14px;
-          border:        1px solid rgba(0,0,37,0.07);
-          /* reserve left-border space to prevent layout shift on hover */
-          border-left:   4px solid transparent;
-          padding:       1.75rem;
-          height:        100%;
-          transition:
-            border-left-color 0.2s ease,
-            transform         0.22s ease,
-            box-shadow        0.22s ease;
+          border:        2px solid rgba(201,168,76,0.4);
+          transition:    border-color 0.22s ease, transform 0.22s ease, background 0.22s ease;
         }
-        .ld-card:hover {
-          border-left-color: ${GOLD};
-          transform:         translateY(-5px);
-          box-shadow:        0 18px 40px rgba(0,0,37,0.08), 0 4px 10px rgba(0,0,37,0.04);
+        .ld-item:hover .ld-icon {
+          border-color: ${GOLD};
+          background:   rgba(201,168,76,0.08);
+          transform:    translateY(-3px);
         }
 
-        /* Icon circle brightens on hover */
-        .ld-icon {
-          transition: background-color 0.2s ease;
-        }
-        .ld-card:hover .ld-icon {
-          background-color: rgba(201,168,76,0.22);
+        .ld-line {
+          position: absolute;
+          top: 28px;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: rgba(0,0,37,0.08);
         }
 
         /* ── diagonal shape at bottom of white area ── */
@@ -151,25 +143,22 @@ export function LeadSection() {
             </p>
           </div>
 
-          {/* ── 2 × 2 card grid ─────────────────────────────────────── */}
-          <div
-            ref={cardsRef}
-            className="grid gap-5 sm:grid-cols-2"
-          >
-            {channels.map(({ icon: Icon, title, body }, i) => (
-              <div
-                key={title}
-                className={`ld-wrap ${cardsIn ? "ld-in" : ""}`}
-                style={{ "--d": `${i * 0.12}s` } as React.CSSProperties}
-              >
-                <div className="ld-card">
-                  {/* Gold icon circle */}
+          {/* ── Horizontal icon band ────────────────────────────────── */}
+          <div ref={cardsRef} className="relative">
+            <div className="ld-line hidden lg:block" aria-hidden="true" />
+            <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4 lg:gap-x-10">
+              {channels.map(({ icon: Icon, title, body }, i) => (
+                <div
+                  key={title}
+                  className={`ld-wrap ${cardsIn ? "ld-in" : ""} ld-item flex flex-col items-center text-center`}
+                  style={{ "--d": `${i * 0.12}s` } as React.CSSProperties}
+                >
+                  {/* Icon circle — sits on the connecting line */}
                   <div
-                    className="ld-icon mb-5 flex h-12 w-12 items-center justify-center rounded-xl"
-                    style={{ backgroundColor: "rgba(201,168,76,0.14)" }}
+                    className="ld-icon relative z-10 mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full"
                   >
                     <Icon
-                      className="h-5 w-5"
+                      className="h-6 w-6"
                       style={{ color: GOLD }}
                       strokeWidth={1.75}
                     />
@@ -177,19 +166,19 @@ export function LeadSection() {
 
                   {/* Title */}
                   <h3
-                    className="mb-2.5 text-[18px] font-bold leading-snug"
+                    className="mb-2 text-[15px] font-bold leading-snug sm:text-[16px]"
                     style={{ color: NAVY }}
                   >
                     {title}
                   </h3>
 
                   {/* Body */}
-                  <p className="text-[15px] leading-relaxed" style={{ color: "#6B6B80" }}>
+                  <p className="max-w-[220px] text-[13px] leading-relaxed sm:text-[14px]" style={{ color: "#6B6B80" }}>
                     {body}
                   </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
