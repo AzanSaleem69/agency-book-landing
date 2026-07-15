@@ -210,7 +210,7 @@ export function CtaSection() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/book.png"
+                  src="/assets/book.png"
                   alt="7-Figure Agency Mindset A-Z — Hardcopy"
                   width={200}
                   height={260}
@@ -238,7 +238,7 @@ export function CtaSection() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/book.png"
+                  src="/assets/book.png"
                   alt="7-Figure Agency Mindset A-Z — E-book"
                   width={200}
                   height={260}

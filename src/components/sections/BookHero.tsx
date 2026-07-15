@@ -210,7 +210,7 @@ export function BookHero() {
                   {/* Book cover */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/book.png"
+                    src="/assets/book.png"
                     alt="7-Figure Agency Mindset A-Z — book cover"
                     width={420}
                     height={560}

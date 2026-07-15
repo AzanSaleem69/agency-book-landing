@@ -180,7 +180,7 @@ export function AuthorSection() {
                 {/* Photo */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/book2.jpeg"
+                  src="/assets/book2.jpeg"
                   alt="Hamid Mahmood reading 7-Figure Agency Mindset A-Z overlooking New York City"
                   width={480}
                   height={540}

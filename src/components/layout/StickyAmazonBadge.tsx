@@ -83,7 +83,7 @@ export function StickyAmazonBadge() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/book.png"
+            src="/assets/book.png"
             alt=""
             width={160}
             height={210}
