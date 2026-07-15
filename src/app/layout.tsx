@@ -16,13 +16,14 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "AdBoost — AI-Powered Marketing Platform",
+  title: "7-Figure Agency Mindset A-Z | Best Seller Entrepreneurship Growth Book By Hamid Mahmood",
   description:
-    "Supercharge your marketing with AI-powered targeting, real-time analytics, and automated optimisation. Start your 14-day free trial today.",
-  keywords: ["marketing", "ads", "advertising", "AI", "analytics", "ROAS", "PPC"],
+    "7-Figure Agency Mindset A-Z is a book by Hamid Mahmood that teaches you how to start and grow a marketing agency to reach million-dollar success and beyond. Order now!",
+  keywords: ["marketing agency", "agency growth", "entrepreneurship", "Hamid Mahmood", "7-Figure Agency Mindset A-Z", "digital marketing agency book"],
   openGraph: {
-    title: "AdBoost — AI-Powered Marketing Platform",
-    description: "Spend less. Earn more. Grow faster.",
+    title: "7-Figure Agency Mindset A-Z | Best Seller Entrepreneurship Growth Book By Hamid Mahmood",
+    description:
+      "7-Figure Agency Mindset A-Z is a book by Hamid Mahmood that teaches you how to start and grow a marketing agency to reach million-dollar success and beyond. Order now!",
     type: "website",
   },
 };
