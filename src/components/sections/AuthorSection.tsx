@@ -32,7 +32,7 @@ function StatItem({
   return (
     <div className="flex flex-col items-center text-center">
       <p
-        className={`as-stat-num text-5xl font-black tabular-nums sm:text-6xl ${done ? "as-stat-pulsed" : ""}`}
+        className={`as-stat-num text-5xl font-black tabular-nums lg:text-6xl ${done ? "as-stat-pulsed" : ""}`}
         style={{ color: GOLD }}
       >
         {trigger
@@ -263,7 +263,7 @@ export function AuthorSection() {
             />
 
             <div
-              className={`as-stats-row ${statsIn ? "as-in" : ""} grid grid-cols-2 gap-10 sm:grid-cols-4`}
+              className={`as-stats-row ${statsIn ? "as-in" : ""} grid grid-cols-2 gap-8 gap-y-10 sm:gap-10 lg:grid-cols-4`}
             >
               {STATS.map(({ prefix, value, suffix, label }) => (
                 <StatItem
