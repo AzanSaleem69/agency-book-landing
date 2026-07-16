@@ -108,57 +108,12 @@ export function StartSection() {
       >
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-          {/* ── Header ──────────────────────────────────────────────── */}
-          <div
-            ref={headRef}
-            className={`ss-header ${headIn ? "ss-in" : ""} mb-14 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between`}
-          >
-            <div className="max-w-2xl">
-              {/* Pill badge */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5">
-                <span
-                  className="rounded-full px-4 py-1.5 text-[11px] font-black tracking-[0.18em] uppercase"
-                  style={{ backgroundColor: NAVY, color: GOLD }}
-                >
-                  🚀&nbsp; Phase One: Start
-                </span>
-              </div>
-
-              {/* Headline */}
-              <h2
-                className="mb-4 f-h2 font-bold tracking-tight"
-                style={{ color: "#FFFFFF", fontFamily: "var(--font-playfair)" }}
-              >
-                Most Agencies Fail in the First 90 Days. Here's Exactly Why.
-              </h2>
-
-              {/* Subheadline */}
-              <p className="text-[17px] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
-                The decisions you make at the start of your agency (niche, positioning, pricing, systems) compound for years. Get them right early and everything else gets easier. Get them wrong and you'll be rebuilding forever.
-              </p>
-            </div>
-
-            {/* Chapter reference — real content instead of decoration,
-                filling the space beside the header on wide screens */}
-            <div className="shrink-0 self-center lg:self-auto">
-              <div
-                className="rounded-2xl px-9 py-7 text-center"
-                style={{ border: "1px solid rgba(201,168,76,0.25)", background: "rgba(255,255,255,0.03)" }}
-              >
-                <p className="mb-1.5 text-[10px] font-black uppercase tracking-[0.2em]" style={{ color: GOLD }}>
-                  Covered In
-                </p>
-                <p className="text-4xl font-bold text-white" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Ch. 1–9
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* ── Body: rotated label + card grid ─────────────────────── */}
+          {/* ── Body: rotated label spans the whole section; header + card
+               grid share ONE content column so there's no separate width
+               constraint creating an empty gap next to the header ────── */}
           <div ref={bodyRef} className="flex items-stretch gap-8 lg:gap-12">
 
-            {/* LEFT: rotated "START" label — desktop only */}
+            {/* LEFT: rotated "START" label — desktop only, spans full height */}
             <div className="hidden lg:flex w-16 shrink-0 items-center justify-center">
               <span
                 className={`ss-label ${bodyIn ? "ss-in" : ""} select-none`}
@@ -178,8 +133,46 @@ export function StartSection() {
               </span>
             </div>
 
-            {/* RIGHT: 2 × 3 mini-card grid */}
-            <div className="flex-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* RIGHT: header + card grid, same column width throughout */}
+            <div className="flex-1">
+
+              {/* Header */}
+              <div
+                ref={headRef}
+                className={`ss-header ${headIn ? "ss-in" : ""} mb-14 max-w-2xl`}
+              >
+                {/* Badges */}
+                <div className="mb-6 flex flex-wrap items-center gap-3">
+                  <span
+                    className="rounded-full px-4 py-1.5 text-[11px] font-black tracking-[0.18em] uppercase"
+                    style={{ backgroundColor: NAVY, color: GOLD }}
+                  >
+                    🚀&nbsp; Phase One: Start
+                  </span>
+                  <span
+                    className="rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.1em]"
+                    style={{ border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.5)" }}
+                  >
+                    Chapters 1–9
+                  </span>
+                </div>
+
+                {/* Headline */}
+                <h2
+                  className="mb-4 f-h2 font-bold tracking-tight"
+                  style={{ color: "#FFFFFF", fontFamily: "var(--font-playfair)" }}
+                >
+                  Most Agencies Fail in the First 90 Days. Here's Exactly Why.
+                </h2>
+
+                {/* Subheadline */}
+                <p className="text-[17px] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  The decisions you make at the start of your agency (niche, positioning, pricing, systems) compound for years. Get them right early and everything else gets easier. Get them wrong and you'll be rebuilding forever.
+                </p>
+              </div>
+
+              {/* Card grid */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {cards.map(({ title, body }, i) => (
                 <div
                   key={title}
@@ -205,6 +198,7 @@ export function StartSection() {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
           </div>
 
