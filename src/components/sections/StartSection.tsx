@@ -158,7 +158,7 @@ export function StartSection() {
 
             {/* Subheadline */}
             <p className="text-[17px] leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
-              The decisions you make at the start of your agency — niche, positioning, pricing, systems — compound for years. Get them right early and everything else gets easier. Get them wrong and you'll be rebuilding forever.
+              The decisions you make at the start of your agency (niche, positioning, pricing, systems) compound for years. Get them right early and everything else gets easier. Get them wrong and you'll be rebuilding forever.
             </p>
           </div>
 

@@ -171,7 +171,7 @@ export function BookHero() {
                   style={{ backgroundColor: GOLD, color: NAVY }}
                   className="rounded-xl px-7 py-3.5 text-[15px] font-black tracking-wide shadow-lg transition-opacity hover:opacity-90"
                 >
-                  Get Your Copy — $9.99
+                  Get Your Copy for $9.99
                 </a>
 
                 <a
@@ -216,7 +216,7 @@ export function BookHero() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/assets/book.png"
-                    alt="7-Figure Agency Mindset A-Z — book cover"
+                    alt="7-Figure Agency Mindset A-Z book cover"
                     width={420}
                     height={560}
                     className="relative z-10 w-[230px] rounded-lg sm:w-[280px] lg:w-[350px]"

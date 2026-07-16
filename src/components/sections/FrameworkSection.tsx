@@ -236,7 +236,7 @@ export function FrameworkSection() {
               className="rounded-xl px-9 py-4 text-[15px] font-black tracking-wide shadow-md transition-opacity hover:opacity-90"
               style={{ backgroundColor: GOLD, color: NAVY }}
             >
-              Get the Full Blueprint — $9.99
+              Get the Full Blueprint for $9.99
             </a>
           </div>
 

@@ -209,7 +209,7 @@ export function SaleSection() {
               <span className="sa2-qmark" aria-hidden="true">&ldquo;</span>
               <p className="sa2-qtext mt-6 mb-4 sm:mt-8">{QUOTE}</p>
               <p className="text-[13px] font-bold uppercase tracking-[0.14em]" style={{ color: GOLD }}>
-                — Hamid Mahmood, Chapter 14
+                Hamid Mahmood, Chapter 14
               </p>
             </div>
           </div>

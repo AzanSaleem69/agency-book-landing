@@ -215,7 +215,7 @@ export function LeadSection() {
               className="mb-8 text-[15px] font-medium"
               style={{ color: GOLD }}
             >
-              Build a lead engine that brings in the right work — consistently, on your terms.
+              Build a lead engine that brings in the right work, consistently, on your terms.
             </p>
 
             {/* CTA */}
@@ -230,7 +230,7 @@ export function LeadSection() {
                 boxShadow:       "0 8px 24px rgba(201,168,76,0.25)",
               }}
             >
-              Build My Pipeline — $9.99
+              Build My Pipeline for $9.99
             </a>
           </div>
         </div>

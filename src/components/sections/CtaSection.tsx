@@ -211,7 +211,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/assets/book.png"
-                  alt="7-Figure Agency Mindset A-Z — Hardcopy"
+                  alt="7-Figure Agency Mindset A-Z hardcopy"
                   width={200}
                   height={260}
                   className="h-[140px] w-auto rounded-xl sm:h-[190px] lg:h-[220px]"
@@ -239,7 +239,7 @@ export function CtaSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/assets/book.png"
-                  alt="7-Figure Agency Mindset A-Z — E-book"
+                  alt="7-Figure Agency Mindset A-Z e-book"
                   width={200}
                   height={260}
                   className="h-[140px] w-auto rounded-xl sm:h-[190px] lg:h-[220px]"
@@ -288,7 +288,7 @@ export function CtaSection() {
                 rel="noopener noreferrer"
                 className="ct-btn-gold"
               >
-                Get the E-book — $9.99
+                Get the E-book for $9.99
               </a>
             </div>
 
@@ -343,7 +343,7 @@ export function CtaSection() {
             className={`ct-copy ${inView ? "ct-in" : ""} mt-6 text-center text-[12px]`}
             style={{ color: "rgba(255,255,255,0.24)" }}
           >
-            &copy; 2026 Hamid The Pro — 7 Figure Agency. All rights reserved.
+            &copy; 2026 Hamid The Pro, 7 Figure Agency. All rights reserved.
           </p>
 
         </div>

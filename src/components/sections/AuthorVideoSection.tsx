@@ -6,7 +6,7 @@ import { Play } from "lucide-react";
 
 const GOLD = "#C9A84C";
 const NAVY = "#000025";
-const BG   = "#F8F7F4";
+const BG   = "#EFEDE7";
 
 const VIDEO_ID = "9VfNlehxdbw";
 const VIDEO_TITLE =

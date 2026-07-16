@@ -199,7 +199,7 @@ export function FaqSection() {
                 (e.currentTarget as HTMLAnchorElement).style.opacity = "1";
               }}
             >
-              Get My Copy — $9.99
+              Get My Copy for $9.99
             </a>
           </div>
 

@@ -250,7 +250,7 @@ export function BookContents() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/assets/book.png"
-                    alt="7-Figure Agency Mindset A-Z — Hardcopy book"
+                    alt="7-Figure Agency Mindset A-Z hardcopy book"
                     width={320}
                     height={420}
                     className="w-[200px] rounded-xl sm:w-[240px] lg:w-[220px]"
@@ -271,7 +271,7 @@ export function BookContents() {
                   boxShadow:       "0 8px 24px rgba(201,168,76,0.28)",
                 }}
               >
-                Start Reading — $9.99
+                Start Reading for $9.99
               </button>
 
               {/* Availability note */}

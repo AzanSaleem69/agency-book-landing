@@ -219,7 +219,7 @@ This price resets at zero!
               className="st-cta"
             >
               <span className="sm:hidden">Get it $9.99</span>
-              <span className="hidden sm:inline">Get the Book — $9.99&nbsp;→</span>
+              <span className="hidden sm:inline">Get the Book for $9.99&nbsp;→</span>
             </a>
           </div>
 

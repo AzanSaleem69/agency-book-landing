@@ -320,7 +320,7 @@ export function UrgencySection() {
               className="ug-cta-btn"
             >
               <Zap className="mr-2 inline-block h-4 w-4 align-text-bottom" aria-hidden="true" />
-              Claim Your Copy — $9.99
+              Claim Your Copy for $9.99
               <Zap className="ml-2 inline-block h-4 w-4 align-text-bottom" aria-hidden="true" />
             </a>
           </div>

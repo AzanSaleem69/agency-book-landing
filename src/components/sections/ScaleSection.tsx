@@ -235,7 +235,7 @@ export function ScaleSection() {
                 boxShadow:       `0 8px 24px rgba(201,168,76,0.3)`,
               }}
             >
-              Get the Scale Framework — $9.99
+              Get the Scale Framework for $9.99
             </a>
           </div>
 
