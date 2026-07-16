@@ -92,11 +92,12 @@ export function PainSection() {
         .ps-card {
           opacity: 0;
           transform: translateY(32px);
-          transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+          transition: opacity 0.55s ease-out, transform 0.4s ease-out, box-shadow 0.25s ease;
           position: relative;
           background: #fff;
           border-radius: 3px;
           padding: 2.25rem 2rem 2rem;
+          height: 100%;
           box-shadow: 0 1px 2px rgba(0,0,37,0.05), 0 1px 12px rgba(0,0,37,0.05);
           overflow: hidden;
         }
@@ -104,9 +105,33 @@ export function PainSection() {
           opacity: 1;
           transform: translateY(0);
         }
+        .ps-card:hover {
+          box-shadow: 0 18px 36px rgba(0,0,37,0.09), 0 4px 10px rgba(0,0,37,0.05);
+          transform: translateY(-4px);
+        }
         .ps-card:nth-child(1) { transition-delay: 0s;    }
-        .ps-card:nth-child(2) { transition-delay: 0.12s; margin-top: 20px; }
+        .ps-card:nth-child(2) { transition-delay: 0.12s; }
         .ps-card:nth-child(3) { transition-delay: 0.24s; }
+
+        /* Top hairline that fills gold on hover, in addition to the underline */
+        .ps-card-top {
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 2px;
+          background: rgba(0,0,37,0.06);
+        }
+        .ps-card-top::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: ${GOLD};
+          transform: scaleX(0);
+          transform-origin: left center;
+          transition: transform 0.35s ease;
+        }
+        .ps-card:hover .ps-card-top::after {
+          transform: scaleX(1);
+        }
 
         /* Ghost page numeral — ties to "reasons 01/02/03" without a literal card grid clone */
         .ps-card-num {
@@ -213,6 +238,9 @@ export function PainSection() {
                 key={title}
                 className={`ps-card ${cardsInView ? "ps-visible" : ""}`}
               >
+                {/* Top hairline — fills gold on hover */}
+                <span className="ps-card-top" aria-hidden="true" />
+
                 {/* Ghost page numeral */}
                 <span className="ps-card-num" aria-hidden="true">
                   {String(i + 1).padStart(2, "0")}

@@ -115,14 +115,21 @@ export function StartSection() {
         className="relative f-section overflow-hidden"
         aria-label="Phase One — Start"
       >
-        {/* Watermark — large, low-opacity "7" mark filling the empty space beside the card grid */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/assets/seven-logo-sd87fsdf-1024x887.webp"
-          alt=""
+        {/* Ghost "90" numeral — ties directly to the "First 90 Days" headline
+            instead of a decorative brand mark, filling the empty space to
+            the right of the (intentionally narrower) header column */}
+        <span
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 top-1/2 hidden w-[380px] -translate-y-1/2 opacity-[0.08] lg:block lg:w-[480px]"
-        />
+          className="pointer-events-none absolute -right-6 top-6 hidden select-none font-bold lg:block"
+          style={{
+            fontFamily: "var(--font-playfair)",
+            fontSize: "clamp(180px, 16vw, 280px)",
+            lineHeight: 1,
+            color: "rgba(201,168,76,0.07)",
+          }}
+        >
+          90
+        </span>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
