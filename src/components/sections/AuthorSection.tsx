@@ -227,7 +227,6 @@ export function AuthorSection() {
                 >
                   Software Pro Digital
                 </a>
-                {" "}· 7-Figure Agency Builder
               </p>
 
               {/* Gold rule */}
