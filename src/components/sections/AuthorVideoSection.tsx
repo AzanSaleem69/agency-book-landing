@@ -8,9 +8,8 @@ const GOLD = "#C9A84C";
 const NAVY = "#000025";
 const BG   = "#EFEDE7";
 
-const VIDEO_ID = "9VfNlehxdbw";
-const VIDEO_TITLE =
-  "A Million Dollar Digital Marketing Agency's Financial Management Breakdown Unlocked | Hamid Mahmood";
+const VIDEO_ID = "sRz_MWUKatg";
+const VIDEO_TITLE = "The Roadmap to Building a 7 Figure Agency | Hamid Mahmood";
 const THUMB = `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`;
 
 export function AuthorVideoSection() {
@@ -103,13 +102,13 @@ export function AuthorVideoSection() {
               className={`av-item av-d2 ${inView ? "av-in" : ""} mb-5 f-h2 font-bold tracking-tight`}
               style={{ color: NAVY, fontFamily: "var(--font-playfair)" }}
             >
-              Watch the Financial Playbook Behind a 7-Figure Agency
+              Watch the Roadmap to Building a 7-Figure Agency
             </h2>
             <p
               className={`av-item av-d3 ${inView ? "av-in" : ""} text-[17px] leading-relaxed`}
               style={{ color: "#6B6B80" }}
             >
-              A short breakdown from Hamid himself on how the numbers actually work behind a seven-figure agency. Same operator, same systems, straight from the book.
+              A short breakdown from Hamid himself on the path from zero to a seven-figure agency. Same operator, same systems, straight from the book.
             </p>
           </div>
 
