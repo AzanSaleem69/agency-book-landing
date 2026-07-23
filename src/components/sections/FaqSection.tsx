@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: "Is $9.99 really the final price?",
-    a: "For now, yes. This is a limited-time launch price. Hamid intends to raise it to the standard retail price once the launch window closes. The countdown timer on this page reflects the current pricing window and once it expires, the price adjusts automatically.",
+    a: "For now, yes. This is a limited-time launch price. Hamid intends to raise it to the standard retail price once the launch window closes, so the sooner you grab it, the more you save.",
   },
 ];
 
