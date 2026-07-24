@@ -229,13 +229,6 @@ export function AuthorSection() {
                 </a>
               </p>
 
-              {/* Gold rule */}
-              <div
-                className="h-[1px] w-16"
-                style={{ backgroundColor: `rgba(201,168,76,0.4)` }}
-                aria-hidden="true"
-              />
-
               {/* Body copy */}
               <div className="flex flex-col gap-4">
                 {BODY.map((para, i) => (
